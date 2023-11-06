@@ -5,7 +5,7 @@
 ** description
 */
 
-#include "../../include/my.h"
+#include "../../INCLUDE/my.h"
 
 char *my_strcat(char *dest, char const *src)
 {

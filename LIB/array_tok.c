@@ -5,7 +5,7 @@
 ** array_tok
 */
 
-#include "../include/my.h"
+#include "../INCLUDE/my.h"
 
 int my_toklen(char *str, char *sep)
 {

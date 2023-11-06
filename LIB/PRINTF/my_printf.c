@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdarg.h>
-#include "../../include/my.h"
+#include "../../INCLUDE/my.h"
 
 void tableau_flags_fonctions(char const *str, int i, va_list list)
 {

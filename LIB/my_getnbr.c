@@ -5,7 +5,7 @@
 ** description
 */
 
-#include "include/my.h"
+#include "INCLUDE/my.h"
 
 int	my_getnbr(char *string)
 {

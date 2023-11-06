@@ -5,7 +5,7 @@
 ** split_string
 */
 
-#include "include/my.h"
+#include "INCLUDE/my.h"
 
 int number_of_ligns(char *str, char spliter)
 {

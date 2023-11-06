@@ -5,7 +5,7 @@
 ** my_getnbr
 */
 
-#include "include/my.h"
+#include "INCLUDE/my.h"
 
 void free_arr(char **array)
 {

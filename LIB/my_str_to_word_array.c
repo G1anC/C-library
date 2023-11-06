@@ -5,7 +5,7 @@
 ** my_str_to_word_array
 */
 
-#include "include/my.h"
+#include "INCLUDE/my.h"
 
 int nbr_of_ligns(char const *str)
 {

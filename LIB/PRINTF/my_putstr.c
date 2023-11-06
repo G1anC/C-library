@@ -5,7 +5,7 @@
 ** my_putstr
 */
 
-#include "include/my.h"
+#include "../../INCLUDE/my.h"
 
 void my_putstr(char *str)
 {
