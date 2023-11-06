@@ -9,8 +9,7 @@
 
 int is_existing(char *str, char c)
 {
-    if (!str) return -1;
-    for (int i = 0; str[i] != NULL; i++)
+    for (int i = 0; str[i]; i++)
         if (str[i] == c)
             return i;
     return -1;

@@ -1,15 +1,17 @@
 # 
 # EPITECH PROJECT, 2023
-# main.c
+# Makefile
 # File description:
-# main
+# Makefile
 #
 
-NAME	=	my_project
+NAME	=	my_project_name
 
 SRC		=	main.c \
 			SRC/*.c \
-			LIB/ *.c \
+			LIB/*.c \
+			LIB/PRINTF/*.c \
+			LIB/READFILES/*.c \
 
 OBJ		=	$(SRC:.o=.c)
 

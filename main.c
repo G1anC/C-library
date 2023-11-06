@@ -23,7 +23,8 @@ int main(int ac, char **argv)
 {
     if (ac != 2)
         return 84;
-    return (!my_strncmp("-h", av[1])) ? help() : core(&(project_t){0});
+    return (!my_strncmp("-h", av[1])) ? help()
+    : core(&(project_t) {.data = 0, .arr = myStrToWordArray(readfile(av[1]))});
 }
 
 // "editor.fontFamily": "Fira Code, 'Courier New', monospace",

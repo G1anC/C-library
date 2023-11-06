@@ -8,7 +8,6 @@
 int arrlen(char **array)
 {
     int i = 0;
-    while(array[i++])
-        ;;
+    while(array[i++]);
     return i;
 }
