@@ -5,44 +5,35 @@
 ** my_str_to_word_array
 */
 
-#include "INCLUDE/my.h"
+// appel de fonction
+// myStrToWordArray(str, mallocWork(str));
 
-int nbr_of_ligns(char const *str)
+#include "../INCLUDE/my.h"
+
+int nbrOfLigns(char *str, char *tmp)
 {
-    int ligns = 1;
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] == ' ' && str[i - 1] != ' ')
-            ligns++;
-    }
-    return ligns;
+    int ligns = 0;
+    while (*str++) ligns += (char *) * (*str != ALPHA && *(str - 1) == ALPHA);
+    return ligns + 8;
 }
 
-char** malloc_work(char const *str)
+char **mallocWork(char *str)
 {
-    int ligns = nbr_of_ligns(str);
-    char **array = malloc(sizeof(char*) * (ligns + 1));
-    for (int x = 0; x < (ligns); x++) {
-        array[x] = malloc(sizeof(char) * 100);
-    }
-    return array;
+    char **arr = malloc(nbrOfLigns(str, my_strdup(str)));
+    for (int i = 0, wordSize = 0; str[i]; i++) {
+        if (BAD_START || NOALPHA_SUITE) continue;
+        if (NEW_LINE) *(arr++) = malloc(wordSize + 1);
+        wordSize++;
+    } return arr;
 }
 
-char **my_str_to_word_array(char const *str)
+void myStrToWordArray(char *str, char **arr)
 {
-    char **array = malloc_work(str);
-    int row = 0, col = 0, n = 0;
-
-    for (; str[n] != '\0'; n++) {
-        if (str[n] == ' ' && str[n - 1] != ' ') {
-            array[row][col] = '\0';
-            row++;
+    for (int i = 0, col = 0; str[i]; i++) {
+        if (BAD_START || NOALPHA_SUITE) continue;
+        if (NEW_LINE) {
+            (*arr++)[col] = '\0';
             col = 0;
-            continue;
-        } if (str[n - 1] == ' ' && str[n] == ' ')
-            continue;
-        array[row][col++] = str[n];
-    }
-    array[row][col] = '\0';
-    array[row + 1] = NULL;
-    return array;
+        } else (*arr)[col++] = str[n];
+    } *(++arr) = NULL;
 }

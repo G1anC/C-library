@@ -100,6 +100,12 @@
     // str to word array boosted with LSD
     char **array_tok(char *, char *);
 
+    // L I B  D E F I N E S
+
+    #define ALPHA (str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z' || str[i] >= '1' && str[i] <= '9')
+    #define BAD_START (i == 0 && str[i] != ALPHA)
+    #define NOALPHA_SUITE (str[i - 1] != ALPHA && str[i] != ALPHA)
+    #define NEW_LINE (str[i] != ALPHA && str[i - 1] == ALPHA)
 
     //  P R O J E C T  F U N C T I O N S
 
