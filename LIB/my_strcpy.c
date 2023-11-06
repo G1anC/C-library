@@ -5,7 +5,7 @@
 ** description
 */
 
-#include "INCLUDE/my.h"
+#include "../INCLUDE/my.h"
 
 char *my_strcpy (char *dest, char const *src)
 {

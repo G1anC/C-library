@@ -5,7 +5,7 @@
 ** my_print_array
 */
 
-#include "../../INCLUDE/my.h"
+#include "../INCLUDE/my.h"
 
 void my_print_array(char **array)
 {

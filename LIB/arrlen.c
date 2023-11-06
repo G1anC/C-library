@@ -5,7 +5,7 @@
 ** my_arraylen
 */
 
-int my_arraylen(char **array)
+int arrlen(char **array)
 {
     int i = 0;
     while(array[i++])

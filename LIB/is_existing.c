@@ -5,7 +5,7 @@
 ** is_existing
 */
 
-#include <stdlib.h>
+#include "../INCLUDE/my.h"
 
 int is_existing(char *str, char c)
 {

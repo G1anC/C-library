@@ -11,20 +11,10 @@
 
     // I N C L U D E S
 
-
-    #include <dirent.h>
     #include <stdio.h>
     #include <fcntl.h>
     #include <stdlib.h>
-    #include <signal.h>
-    #include <ncurses.h>
-    #include <sys/stat.h>
-    #include <sys/types.h>
-    #include <unistd.h>
-    #include <sys/wait.h>
-    #include <sys/time.h>
-    #include <sys/resource.h>
-    #include <string.h>
+    #include "project.h"
 
 
     // L I B R A R Y
