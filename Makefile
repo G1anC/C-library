@@ -42,6 +42,7 @@ SRC		=	main.c \
 			LIB/my_strlen.c \
 			LIB/my_getnbr.c \
 			LIB/array_tok.c \
+			LIB/exitError.c \
 			LIB/free_arr.c \
 			LIB/is_alpha.c \
 			LIB/arrlen.c \
