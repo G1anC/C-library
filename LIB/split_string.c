@@ -7,40 +7,27 @@
 
 #include "../INCLUDE/my.h"
 
-int number_of_ligns(char *str, char spliter)
-{
-    int n_o_ligns = 0;
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] == spliter) {
-            n_o_ligns++;
-        }
-    }
-    return n_o_ligns + 1;
-}
+#define PTR (char *)
 
-char **malloc_work(int n_o_ligns)
+static char **algo(char *str, char **arr, char *sep, int pos)
 {
     int i = 0;
-    char **array = malloc(sizeof(char *) * n_o_ligns);
-
-    for (; i < n_o_ligns; i++)
-        array[i] = malloc(sizeof(char) * 100);
-    array[i] = malloc(sizeof(char));
-    return array;
+    for (; !isExisting(sep, str[i]) && str[i]; i++);
+    arr[pos] = malloc(i + 1);
+    if (( i > 0 && !isExisting(sep, str[i - 1])) && isExisting(sep, str[i])) {
+        my_strncpy(arr[pos], str, i);
+        pos += (my_strlen(arr[pos]));
+    } if (!str[i]) {
+        if (i > 0 && !isExisting(sep, str[i - 1]))
+            my_strncpy(arr[pos++], str, i);
+        arr[pos] = NULL;
+        return arr;
+    } return algo(&str[i + 1], arr, sep, pos);
 }
 
-char **split_string(char *str, char spliter)
+char** splitString(char *str, char *sep)
 {
-    int row = 0, col = 0, n_o_ligns = number_of_ligns(str, spliter);
-    char **array = malloc_work(n_o_ligns);
-
-    for (int i = 0; str[i] != '\0'; i++, col++) {
-        if (str[i] == spliter) {
-            array[row++][col] = '\0';
-            col = 0;
-            continue;
-        } array[row][col++] = str[i];
-    } array[row][col] = '\0';
-    array[row][++col] = NULL;
-    return array;
+    int count = 1;
+    for (int i = 0; str[i++]; count += (isExisting(sep, str[i])));
+    return algo(str, malloc(PTR * (count + 1)), sep, 0);
 }

@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-int is_existing(char *str, char c)
+int isExisting(char *str, char c)
 {
     for (int i = 0; str[i]; i++)
         if (str[i] == c)
