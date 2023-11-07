@@ -43,6 +43,7 @@ SRC		=	main.c \
 			LIB/my_getnbr.c \
 			LIB/array_tok.c \
 			LIB/free_arr.c \
+			LIB/is_alpha.c \
 			LIB/arrlen.c \
 			LIB/putarr.c \
 
