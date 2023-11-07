@@ -5,6 +5,8 @@
 ** description
 */
 
+#include "../INCLUDE/my.h"
+
 char *my_strncat(char *dest, char const *src, int nb)
 {
     int len = my_strlen(dest), i = 0;
