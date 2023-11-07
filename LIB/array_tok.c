@@ -20,7 +20,6 @@ int my_toklen(char *str, char *sep)
 char **array_tok(char *str, char *sep)
 {
     char **array = malloc(my_toklen(str, sep)), *word = strtok(str, sep);
-
     for (int i = 0; word; i++) {
         array[i] = word;
         word = strtok(NULL, sep);
