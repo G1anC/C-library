@@ -19,11 +19,11 @@ int help(void) {
     return 0;
 }
 
-int main(int ac, char **argv)
+int main(int ac, char **av)
 {
     if (ac != 2)
         return 84;
-    return (!my_strncmp("-h", av[1])) ? help()
+    return (!my_strncmp("-h", av[1], 2)) ? help()
     : core(&(project_t) {.data = 0, .arr = myStrToWordArray(readfile(av[1]))});
 }
 

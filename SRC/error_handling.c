@@ -6,3 +6,10 @@
 */
 
 #include "../INCLUDE/my.h"
+
+int errorHandler(project_t *project)
+{
+    if (1)
+        return 84;
+    return 0;
+}

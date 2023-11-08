@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-#define PTR (char *)
+#define PTR sizeof(char *)
 
 static char **algo(char *str, char **arr, char *sep, int pos)
 {
@@ -20,7 +20,7 @@ static char **algo(char *str, char **arr, char *sep, int pos)
     } if (!str[i]) {
         if (i > 0 && !isExisting(sep, str[i - 1]))
             my_strncpy(arr[pos++], str, i);
-        arr[pos] = NULL;
+        arr[pos] = 0;
         return arr;
     } return algo(&str[i + 1], arr, sep, pos);
 }
