@@ -6,15 +6,19 @@
 */
 
 
-#ifndef MY_H_
-    #define MY_H_
+#ifndef PROJECT_H
+    #define PROJECT_H
 
     // P R O J E C T  S T R U C T U R E S
 
     typedef struct project_structure {
         int data;
-        char **array;
+        char **arr;
         struct project_structure *next;
     } project_t;
 
-#endif /* !MY_H_ */
+    //  P R O J E C T  F U N C T I O N S
+
+    int errorHandler(project_t *project);
+
+#endif /* !PROJECT_H */

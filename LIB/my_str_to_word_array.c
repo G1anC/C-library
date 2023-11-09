@@ -10,20 +10,20 @@
 
 #include "../INCLUDE/my.h"
 
+#define PTR sizeof(char *)
+
 int nbrOfLigns(char *str, char *tmp)
 {
     int ligns = 0;
-    while (*str++)
-        ligns += (char *) * (*str != ALPHA && *(str - 1) == ALPHA);
-    return ligns + 8;
+    for (; *str++; ligns += (PTR * (*str != ALPHA && *(str - 1) == ALPHA)));
+    return ligns;
 }
 
 char **mallocWork(char *str)
 {
-    char **arr = malloc(nbrOfLigns(str, my_strdup(str)));
+    char **arr = malloc(nbrOfLigns(str, my_strdup(str)) + PTR);
     for (int i = 0, wordSize = 0; str[i]; i++) {
-        if (BAD_START || NOALPHA_SUITE)
-            continue;
+        if (BAD_START || NOALPHA_SUITE) continue;
         if (NEW_LINE)
             *(arr++) = malloc(wordSize + 1);
         wordSize++;
