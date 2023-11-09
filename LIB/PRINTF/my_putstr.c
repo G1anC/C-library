@@ -5,10 +5,24 @@
 ** my_putstr
 */
 
+<<<<<<< HEAD:my_printf/my_putstr.c
+#include <stdio.h>
+#include "../include/my.h"
+=======
 #include "../../INCLUDE/my.h"
+>>>>>>> 8df2ac5476a54e433d427e79a4478a1068640241:LIB/PRINTF/my_putstr.c
 
-void my_putstr(char *str)
+void my_putchar(char str)
 {
-    for (int i = 0; str[i] != '\0'; i++)
-        write(1, &str[i], 1);
+    write(1, &str, 1);
+}
+
+int my_putstr(int fd, char *str)
+{
+    char *err_mess = "Write failed -> invalid arguments";
+
+    if (write(fd, str, my_strlen(str)) == -1) {
+        my_putstr(2, err_mess);
+        return 84;
+    } return 0;
 }

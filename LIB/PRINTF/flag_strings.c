@@ -7,10 +7,11 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include "../include/my.h"
 
 void flag_s(va_list list)
 {
-    my_putstr(va_arg(list, char*));
+    my_putstr(1, va_arg(list, char*));
 }
 
 void flag_c(va_list list)

@@ -7,6 +7,7 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include "../include/my.h"
 
 
 void argx_maj(int arg)
@@ -24,5 +25,5 @@ void flag_x_maj(va_list list)
 
 void flag_e_max(va_list list)
 {
-    return 0;
+    return;
 }

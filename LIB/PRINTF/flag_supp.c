@@ -7,8 +7,9 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include "../include/my.h"
 
 void flag_a(va_list list)
 {
-    return 0;
+    return;
 }
