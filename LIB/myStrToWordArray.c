@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2023
-** my_str_to_word_array.C
+** myStrToWordArray.C
 ** File description:
-** my_str_to_word_array
+** myStrToWordArray
 */
 
 // appel de fonction
@@ -32,12 +32,16 @@ char **mallocWork(char *str)
 
 void myStrToWordArray(char *str, char **arr)
 {
+    int col = 0;
     for (int i = 0, col = 0; str[i]; i++) {
-        if (BAD_START || NOALPHA_SUITE) continue;
+        if (BAD_START || NOALPHA_SUITE)
+            continue;
         if (NEW_LINE) {
             (*arr++)[col] = '\0';
             col = 0;
-        } else (*arr)[col++] = str[n];
-    } *arr[col] = '\0';
+        }
+        else (*arr)[col++] = str[i];
+    }
+    *arr[col] = '\0';
     *(++arr) = NULL;
 }

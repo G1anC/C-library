@@ -84,7 +84,7 @@
     void my_print_array(char **);
 
     // separates string into an array :
-    char **my_str_to_word_array(char *);
+    char **myStrToWordArray(char *);
 
     // array length calculator
     int arrlen(char **);
@@ -100,7 +100,7 @@
     // L I B R A R Y  D E F I N E S
 
     #define NUMBER (str[i] >= '0' && str[i] <= '9')
-    #define ALPHA (str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z' || str[i] >= '1' && str[i] <= '9')
+    #define ALPHA (*str >= 'a' && *str <= 'z' || *str >= 'A' && *str <= 'Z' || *str >= '1' && *str <= '9')
     #define BAD_START (i == 0 && str[i] != ALPHA)
     #define NOALPHA_SUITE (str[i - 1] != ALPHA && str[i] != ALPHA)
     #define NEW_LINE (str[i] != ALPHA && str[i - 1] == ALPHA)

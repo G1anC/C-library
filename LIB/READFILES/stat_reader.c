@@ -18,5 +18,5 @@ char **stat_reader(char *name)
     read(fd, buffer, st.st_size);
     buffer[st.st_size] = '\0';
     close(fd);
-    return my_str_to_word_array(buffer);
+    return myStrToWordArray(buffer);
 }
