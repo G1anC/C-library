@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** main.c
+** error_handling.c
 ** File description:
 ** main
 */

@@ -10,10 +10,18 @@
 
     // I N C L U D E S
 
-    #include <dirent.h>
     #include <stdio.h>
-    #include <fcntl.h>
     #include <stdlib.h>
+    #include <unistd.h>
+
+    #include <stdarg.h>
+    #include <string.h>
+    #include <fcntl.h>
+
+    #include <dirent.h>
+    #include <sys/types.h>
+    #include <sys/stat.h>
+
     #include "project.h"
 
     // L I B R A R Y
@@ -46,7 +54,7 @@
     void argx(int arg);
     int my_put_nbr(int);
     int my_putstr(int fd, char *);
-    void my_putchar(char);
+    int my_putchar(char c);
 
         // important functions
 
@@ -84,7 +92,7 @@
     void my_print_array(char **);
 
     // separates string into an array :
-    char **myStrToWordArray(char *);
+    void myStrToWordArray(char *str, char **arr);
 
     // array length calculator
     int arrlen(char **);
@@ -95,7 +103,14 @@
     // str to word array boosted with LSD
     char **array_tok(char *, char *);
 
-    void exit_error(char *str);
+    // exit with error message
+    void exitError(char *errMess);
+
+    // return an allocated array from a string
+    char **mallocWork(char *str);
+
+    // returns a dupliacte of the string given as parameter
+    char *my_strdup(char const *str);
 
     // L I B R A R Y  D E F I N E S
 
@@ -104,6 +119,8 @@
     #define BAD_START (i == 0 && str[i] != ALPHA)
     #define NOALPHA_SUITE (str[i - 1] != ALPHA && str[i] != ALPHA)
     #define NEW_LINE (str[i] != ALPHA && str[i - 1] == ALPHA)
+    #define DIGITS (*str >= '0' && *str <= '9')
+    #define SIGN (*str == '+' && *str == '-')
 
     //  P R O J E C T  F U N C T I O N S
 

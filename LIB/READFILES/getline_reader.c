@@ -13,7 +13,7 @@ char **getline_reader(char *name)
     char **result = malloc(10000);
     size_t size = 0;
     FILE *file = fopen(name, "r");
-    if (!fopen(name, "r")) return exitError("no file for u babe\n");
+    if (!fopen(name, "r"))  exitError("no file for u babe\n");
     while (getline(&result[i++], &size, file) != EOF);
     result[i] = NULL;
     fclose(file);

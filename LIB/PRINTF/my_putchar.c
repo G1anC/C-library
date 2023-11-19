@@ -5,10 +5,7 @@
 ** my_printf en meilleur
 */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include "../include/my.h"
+#include "../../INCLUDE/my.h"
 
 int my_putchar(char c)
 {

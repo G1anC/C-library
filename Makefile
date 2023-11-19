@@ -20,6 +20,7 @@ SRC		=	main.c \
 			LIB/my_strcat.c \
 			LIB/my_strcmp.c \
 			LIB/my_strcpy.c \
+			LIB/my_strdup.c \
 			LIB/my_strlen.c \
 			LIB/my_getnbr.c \
 			LIB/array_tok.c \
@@ -35,6 +36,7 @@ SRC		=	main.c \
 			LIB/PRINTF/my_printf.c \
 			LIB/myStrToWordArray.c \
 			LIB/PRINTF/my_putstr.c \
+			LIB/PRINTF/my_putchar.c \
 			LIB/PRINTF/my_put_nbr.c \
 			LIB/signed_int_to_str.c \
 			LIB/PRINTF/flag_strings.c \
@@ -48,9 +50,11 @@ OBJ		 =	$(SRC:.c=.o)
 
 MSG		 =	""
 
+CFLAGS	+=	-g -I./INCLUDE
+
 all :
 	@clear
-	@gcc -g -o $(NAME) $(SRC)
+	@gcc -o $(NAME) $(SRC) $(CFLAGS)
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"

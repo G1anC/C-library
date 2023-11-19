@@ -5,11 +5,7 @@
 ** description
 */
 
-<<<<<<< HEAD:my_printf/my_put_nbr.c
-#include "../include/my.h"
-=======
 #include "../../INCLUDE/my.h"
->>>>>>> 8df2ac5476a54e433d427e79a4478a1068640241:LIB/PRINTF/my_put_nbr.c
 
 int my_put_nbr(int nb)
 {

@@ -5,8 +5,7 @@
 ** page 1 des fonctions des différents flags
 */
 
-#include <stdio.h>
-#include "../include/my.h"
+#include "../../INCLUDE/my.h"
 
 void flag_d(va_list list)
 {

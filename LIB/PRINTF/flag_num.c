@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
-#include "../include/my.h"
+#include "../../INCLUDE/my.h"
 
 void flag_o(va_list list)
 {

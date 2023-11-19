@@ -5,13 +5,7 @@
 ** sus
 */
 
-#include <stdio.h>
-#include <stdarg.h>
-<<<<<<< HEAD:my_printf/my_printf.c
-#include "../include/my.h"
-=======
 #include "../../INCLUDE/my.h"
->>>>>>> 8df2ac5476a54e433d427e79a4478a1068640241:LIB/PRINTF/my_printf.c
 
 void tableau_flags_fonctions(char character, va_list list)
 {

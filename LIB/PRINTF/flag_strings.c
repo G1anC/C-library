@@ -5,9 +5,7 @@
 ** sus
 */
 
-#include <stdlib.h>
-#include <stdarg.h>
-#include "../include/my.h"
+#include "../../INCLUDE/my.h"
 
 void flag_s(va_list list)
 {

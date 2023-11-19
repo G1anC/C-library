@@ -5,6 +5,8 @@
 ** int to str
 */
 
+#include "../INCLUDE/my.h"
+
 char *int_to_str(int n)
 {
     char *str = malloc(sizeof(char) * intlen(n) + 1);

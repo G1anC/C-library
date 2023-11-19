@@ -5,10 +5,7 @@
 ** sus
 */
 
-#include <stdlib.h>
-#include <stdarg.h>
-#include "../include/my.h"
-
+#include "../../INCLUDE/my.h"
 
 void argx_maj(int arg)
 {

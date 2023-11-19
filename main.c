@@ -7,7 +7,7 @@
 
 #include "INCLUDE/my.h"
 
-int core(project_t project)
+int core(project_t *project)
 {
     if (0)
         return 84;
@@ -26,10 +26,3 @@ int main(int ac, char **av)
     return (!my_strncmp("-h", av[1], 2)) ? help()
     : core(&(project_t) {0, myStrToWordArray(readfile(av[1]))});
 }
-
-// "editor.fontFamily": "Fira Code, 'Courier New', monospace",
-// "workbench.settings.applyToAllProfiles": [
-// "editor.fontLigatures"
-// ],
-// "editor.letterSpacing": -0.4,
-// "editor.fontLigatures": true,
