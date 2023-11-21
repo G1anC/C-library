@@ -16,13 +16,13 @@ You can find :
 ### Makefile
 
 I created a customized Makefile with simple + extra rules :
-    * ```all```-----> compile project.
-    * ```clean```---> removal of OBJ(ect) files.
-    * ```fclean```--> clean project from any unwanted files.
-    * ```re```------> cleaning project to recompile.
-    * ```.PHONY```--> functional test of every Makefile rules.
-    * ```cs```------> fclean trigger into EPITECH coding style checker.
-    * ```commit```--> push changed files with writtable message.
+  * ```all```-----> compile project.
+  * ```clean```---> removal of OBJ(ect) files.
+  * ```fclean```--> clean project from any unwanted files.
+  * ```re```------> cleaning project to recompile.
+  * ```.PHONY```--> functional test of every Makefile rules.
+  * ```cs```------> fclean trigger into EPITECH coding style checker.
+  * ```commit```--> push changed files with writtable message.
 
 Here are the looks of every rules : 
 
