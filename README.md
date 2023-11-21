@@ -1,6 +1,6 @@
 # EPITECH C PROJECT STARTERPACK
 
-This is the template i used whenever a C project started at my school (EPITECH).
+***This is the template i used whenever a C project started at my school (EPITECH).***
 
 You can find :
 
@@ -8,7 +8,7 @@ You can find :
   
   *  My entire library, from "piscine" exercices to functions built along the year.
    
-  *  Explanations of every library functions in "my.h" file
+  *  Explanations of every library functions in "my.h" file.
     
   *  A customized Makefile with simple + extra rules :
      * ```all```    -> compile project
