@@ -17,12 +17,14 @@ static char **algo(char *str, char **arr, char *sep, int pos)
     if (( i > 0 && !isExisting(sep, str[i - 1])) && isExisting(sep, str[i])) {
         my_strncpy(arr[pos], str, i);
         pos += (my_strlen(arr[pos]));
-    } if (!str[i]) {
+    }
+    if (!str[i]) {
         if (i > 0 && !isExisting(sep, str[i - 1]))
             my_strncpy(arr[pos++], str, i);
-        arr[pos] = 0;
+        arr[pos] = NULL;
         return arr;
-    } return algo(&str[i + 1], arr, sep, pos);
+    }
+    return algo(&str[i + 1], arr, sep, pos);
 }
 
 char** splitString(char *str, char *sep)
