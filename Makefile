@@ -55,6 +55,8 @@ CFLAGS	+=	-g -I./INCLUDE
 all :
 	@clear
 	@gcc -o $(NAME) $(SRC) $(CFLAGS)
+	@mkdir BUILD_DIR/
+	@mv $(OBJ) ./BUILD_DIR/
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -70,7 +72,7 @@ all :
 
 clean :
 	@clear
-	@rm -rf $(OBJ)
+	@rm -rf BUILD_DIR/
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -84,11 +86,12 @@ clean :
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n\n\n"
 
-fclean : clean
+fclean :
 	@clear
-	@rm -rf $(NAME)
-	@rm -rf vgcore.*
-	@rm -rf coding-style-reports.log
+	@rm -rf BUILD_DIR/
+	@rm $(NAME)
+	@rm vgcore.*
+	@rm coding-style-reports.log
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -102,8 +105,15 @@ fclean : clean
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n\n\n"
 
-re : fclean all
+re :
 	@clear
+	@rm -rf BUILD_DIR/
+	@rm $(NAME)
+	@rm vgcore.*
+	@rm coding-style-reports.log
+	@gcc -o $(NAME) $(SRC) $(CFLAGS)
+	@mkdir BUILD_DIR/
+	@mv $(OBJ) ./BUILD_DIR/
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -117,14 +127,22 @@ re : fclean all
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n\n\n"
 
-cs: fclean
+cs:
 	@clear
-	@coding-style . .
+	@rm -rf BUILD_DIR/
+	@rm $(NAME)
+	@rm vgcore.*
+	@rm coding-style-reports.log
+	@coding-style . . > /dev/null/
 	@echo -e "\n"
 	@cat coding-style-reports.log
 	@echo -e "\n"
 
-commit: fclean
+commit:
+	@rm -rf BUILD_DIR/
+	@rm $(NAME)
+	@rm vgcore.*
+	@rm coding-style-reports.log
 	@git add -A
 	@read -p "Commit message [$(MSG)]: " NEW_MSG; \
 	MSG="$${NEW_MSG:-$(MSG)}" && \
