@@ -102,7 +102,7 @@
         char **array_tok(char *, char *);
 
         // exit with error message
-        void exitError(char *errMess);
+        void exitErr(char *errMess);
 
         // return an allocated array from a string
         char **mallocWork(char *str);

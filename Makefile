@@ -24,7 +24,7 @@ SRC		=	main.c \
 			LIB/my_strlen.c \
 			LIB/my_getnbr.c \
 			LIB/array_tok.c \
-			LIB/exitError.c \
+			LIB/exitErr.c \
 			LIB/my_strncat.c \
 			LIB/my_strncpy.c \
 			LIB/my_strncmp.c \
