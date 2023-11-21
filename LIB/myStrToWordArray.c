@@ -15,6 +15,7 @@
 int nbrOfLigns(char *str, char *tmp)
 {
     int ligns = 0;
+
     for (; *str++; ligns += (PTR * (*str != ALPHA && *(str - 1) == ALPHA)));
     return ligns;
 }
@@ -22,7 +23,9 @@ int nbrOfLigns(char *str, char *tmp)
 char **mallocWork(char *str)
 {
     char **arr = malloc(nbrOfLigns(str, my_strdup(str)) + PTR);
-    for (int i = 0, wordSize = 0; str[i]; i++) {
+    int wordSize = 0;
+
+    for (int i = 0; str[i]; i++) {
         if (BAD_START || NOALPHA_SUITE) continue;
         if (NEW_LINE)
             *(arr++) = malloc(wordSize + 1);
@@ -33,14 +36,15 @@ char **mallocWork(char *str)
 void myStrToWordArray(char *str, char **arr)
 {
     int col = 0;
-    for (int i = 0, col = 0; str[i]; i++) {
+
+    for (int i = 0; str[i]; i++) {
         if (BAD_START || NOALPHA_SUITE)
             continue;
         if (NEW_LINE) {
-            (*arr++)[col] = '\0';
+            *(arr++)[col] = '\0';
             col = 0;
-        }
-        else (*arr)[col++] = str[i];
+        } else
+            (*arr)[col++] = str[i];
     }
     *arr[col] = '\0';
     *(++arr) = NULL;
