@@ -7,11 +7,6 @@
 
 #include "../../INCLUDE/my.h"
 
-void my_putchar(char str)
-{
-    write(1, &str, 1);
-}
-
 int my_putstr(int fd, char *str)
 {
     char *err_mess = "Write failed -> invalid arguments";
@@ -19,5 +14,6 @@ int my_putstr(int fd, char *str)
     if (write(fd, str, my_strlen(str)) == -1) {
         my_putstr(2, err_mess);
         return 84;
-    } return 0;
+    }
+    return 0;
 }

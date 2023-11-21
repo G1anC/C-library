@@ -17,6 +17,7 @@ void argx_maj(int arg)
 void flag_x_maj(va_list list)
 {
     int arg = va_arg(list, int);
+
     argx_maj(arg);
 }
 

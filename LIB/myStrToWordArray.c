@@ -26,11 +26,13 @@ char **mallocWork(char *str)
     int wordSize = 0;
 
     for (int i = 0; str[i]; i++) {
-        if (BAD_START || NOALPHA_SUITE) continue;
+        if (BAD_START || NOALPHA_SUITE)
+            continue;
         if (NEW_LINE)
             *(arr++) = malloc(wordSize + 1);
         wordSize++;
-    } return arr;
+    }
+    return arr;
 }
 
 void myStrToWordArray(char *str, char **arr)

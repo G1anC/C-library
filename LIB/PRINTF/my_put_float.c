@@ -46,15 +46,18 @@ void negativ(double f, int x)
 
 double my_put_float(double nbr)
 {
-    int x = (int)nbr, i = 0;
+    int x = (int)nbr;
+    int i = 0;
 
     if (nbr == x) {
         my_printf("%d.000000", x);
         return nbr;
-    } if (nbr > 0) {
+    }
+    if (nbr > 0) {
         positiv(nbr, x);
         return nbr;
-    } if (nbr < 0) {
+    }
+    if (nbr < 0) {
         negativ(nbr, x);
         return nbr;
     }

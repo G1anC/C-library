@@ -14,7 +14,8 @@ int core(project_t *project)
     return 0;
 }
 
-int help(void) {
+int help(void)
+{
     my_printf("");
     return 0;
 }

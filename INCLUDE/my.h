@@ -49,7 +49,7 @@
         void argx(int arg);
         int my_put_nbr(int);
         int my_putstr(int fd, char *);
-        int my_putchar(char c);
+        void my_putchar(char c);
 
     // L I B R A R Y  F U N C T I O N S
 

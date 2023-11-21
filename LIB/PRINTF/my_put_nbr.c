@@ -10,6 +10,7 @@
 int my_put_nbr(int nb)
 {
     int compt = 0;
+
     if (nb < 0) {
         my_putchar('-');
         nb = -nb;

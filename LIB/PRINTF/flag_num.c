@@ -14,6 +14,7 @@ void flag_o(va_list list)
     int arg = va_arg(list, int);
     int result = 0;
     int i = 1;
+
     while (arg != 0) {
         result += (arg % 8) * i;
         arg = arg / 8;
@@ -27,6 +28,7 @@ void flag_b(va_list list)
     int arg = va_arg(list, int);
     int result = 0;
     int i = 1;
+
     while (arg != 0) {
         result += (arg % 2) * i;
         arg = arg / 2;
@@ -38,6 +40,7 @@ void flag_b(va_list list)
 void flag_x(va_list list)
 {
     int arg = va_arg(list, int);
+
     argx(arg);
 }
 
