@@ -17,16 +17,6 @@ You can find :
 
 I created a customized Makefile with simple + extra rules :
   * ```all```-----> compile project.
-  * ```clean```---> removal of OBJ(ect) files.
-  * ```fclean```--> clean project from any unwanted files.
-  * ```re```------> cleaning project to recompile.
-  * ```.PHONY```--> functional test of every Makefile rules.
-  * ```cs```------> fclean trigger into EPITECH coding style checker.
-  * ```commit```--> push changed files with writtable message.
-
-Here are the looks of every rules : 
-
-* all :
 ```
  _________                       .__.__          __  .__                  ________                       
 \_   ___ \  ____   _____ ______ |__|  | _____ _/  |_|__| ____   ____     \_____  \   ____   ____   ____ 
@@ -35,8 +25,9 @@ Here are the looks of every rules :
  \______  /\____/|__|_|  /   __/|__|____|____  /__| |__|\____/|___|  /   /_______  /\____/|___|  /\___  >
         \/             \/|__|                \/                    \/            \/            \/     \/
 ```
+<br>
 
-* clean :
+  * ```clean```---> removal of OBJ(ect) files.
 ```
 __________                   __               __      _________ .__                                  .___
 \______   \_______  ____    |__| ____   _____/  |_    \_   ___ \|  |   ____ _____    ____   ____   __| _/
@@ -45,8 +36,9 @@ __________                   __               __      _________ .__             
  |____|     |__|   \____/\__|  |\___  >\___  >__|      \______  /____/\___  >____  /___|  /\___  >____ |
                         \______|    \/     \/                 \/          \/     \/     \/     \/     \/
 ```
+<br>
 
-* fclean :
+  * ```fclean```--> clean project from any unwanted files.
 ```
 __________      .__.__       .___   ___________                               .___
 \______   \__ __|__|  |    __| _/   \_   _____/___________    ______ ____   __| _/
@@ -55,8 +47,9 @@ __________      .__.__       .___   ___________                               ._
  |______  /____/|__|____/\____ |    /_______  /|__|  |____  /____  >\___  >____ |
         \/                    \/            \/            \/     \/     \/     \/
 ```
+<br>
 
-* re :
+  * ```re```------> cleaning project to recompile.
 ```
 __________      .__.__       .___  __________                                                 __             .___
 \______   \__ __|__|  |    __| _/  \______   \ ____   ____  ____   ____   ____   ____   _____/  |_  ____   __| _/
@@ -65,8 +58,13 @@ __________      .__.__       .___  __________                                   
  |______  /____/|__|____/\____ |    |____|_  /\___  >\___  >____/|___|  /___|  /\___  >\___  >__|  \___  >____ | 
         \/                    \/           \/     \/     \/           \/     \/     \/     \/          \/     \/ 
 ```
+<br>
 
-* commit :
+  * ```.PHONY```--> functional test of every Makefile rules.
+
+  * ```cs```------> fclean trigger into EPITECH coding style checker.
+
+  * ```commit```--> push changed files with writtable message.
 ```
  _________ .__                                             _________                        .__  __             .___
  \_   ___ \|  |__ _____    ____    ____   ____   ______    \_   ___ \  ____   _____   _____ |__|/  |_  ____   __| _/
