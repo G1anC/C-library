@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-char *ncpy(char *dest, char *src, int size)
+extern char *ncpy(char *dest, char *src, int size)
 {
     int i = 0;
 

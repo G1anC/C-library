@@ -7,7 +7,7 @@
 
 #include "INCLUDE/my.h"
 
-int core(project_t *project)
+int core(p_t *p)
 {
     for (;;) {
         if (/* ERROR */)
@@ -30,9 +30,6 @@ int main(int ac, char **av)
 {
     if (ac != 2)
         return 84;
-    return (!ncmp("-h", av[1], 2)) ? help() : core(
-    &(project_t) {
-        0,
-        strToArr(readfile(av[1]))
-    });
+    return (!ncmp("-h", av[1], 2)) ?
+            help() : core(&(p_t){0, strToArr(readfile(av[1]))});
 }

@@ -5,21 +5,21 @@
 ** main
 */
 
-#include "../INCLUDE/my.h"
+#include "my.h"
 
-char *cmpCharacters(char _c1, char* _cmp)
+static char *cmpCharacters(char _c1, char restrict *_cmp)
 {
-    for (int i = 0; _cmp[i]; i++)
+    for (size_t i = 0; _cmp[i]; i++)
         if (_c1 == _cmp[i])
             return &_c1;
     return NULL;
 }
 
-char *pbrk(char *str, char *_toFind)
+extern char *pbrk(char *str, char restrict *_toFind)
 {
     char *res = NULL;
 
-    for (int i = 0; str[i]; i++)
+    for (size_t i = 0; str[i]; i++)
         if ((res = cmpCharacters(str[i], _toFind)) != NULL)
             return res;
     return NULL;

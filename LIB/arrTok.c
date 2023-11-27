@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-int my_toklen(char *str, char *sep)
+static int my_toklen(char *str, char *sep)
 {
     int ligns = 0;
 
@@ -16,7 +16,7 @@ int my_toklen(char *str, char *sep)
     return (++ligns) * PTR;
 }
 
-char **arrTok(char *str, char *sep)
+extern char **arrTok(char *str, char *sep)
 {
     char **array = malloc(my_toklen(str, sep));
     char *word = strtok(str, sep);

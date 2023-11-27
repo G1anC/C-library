@@ -5,7 +5,7 @@
 ** description
 */
 
-int ncmp(char const *s1, char const *s2, int n)
+extern int ncmp(char const *s1, char const *s2, int n)
 {
     int diff = 0;
 

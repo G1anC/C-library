@@ -7,7 +7,7 @@
 
 #include "../../INCLUDE/my.h"
 
-char **getFile(char *name)
+extern char **getFile(char restrict *name)
 {
     int i = 0;
     char **result = malloc(10000);

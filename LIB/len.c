@@ -5,7 +5,7 @@
 ** len
 */
 
-int len(char *str)
+extern int len(char *str)
 {
     int i = 0;
 

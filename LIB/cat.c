@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-char *cat(char *dest, char const *src)
+extern char *cat(char *dest, char const *src)
 {
     int len = len(dest)
     int i = 0;

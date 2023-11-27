@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-void exitErr(char *errMess)
+extern void exitErr(char *errMess)
 {
     putStr(2, errMess);
     register int rdi asm("rdi") = 84;

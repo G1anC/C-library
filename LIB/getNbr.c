@@ -15,7 +15,7 @@
 //     return nbr * sign;
 // }
 
-int	getNbr(char *str)
+extern int getNbr(char *str)
 {
     int nbr = 0;
     int sign = 1;

@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-char *dup(char const *str)
+extern char *dup(char const *str)
 {
     return (!str) ? NULL : cpy(malloc(len(str) + 1), str);
 }

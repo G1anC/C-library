@@ -17,7 +17,7 @@ void tabFlag(char character, va_list list)
             (*fonctions[x])(list);
 }
 
-int my_printf(char const *str, ...)
+int my_printf(char const restrict *str, ...)
 {
     int i = 0;
     va_list list;

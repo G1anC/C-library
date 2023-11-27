@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-char *nbToStr(int nb)
+extern char *nbToStr(int nb)
 {
     char *str = "";
     int tmp = nb * (-(nb < 0) + (nb >= 0));

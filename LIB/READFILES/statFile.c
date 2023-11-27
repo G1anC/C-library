@@ -7,7 +7,7 @@
 
 #include "../../INCLUDE/my.h"
 
-char **statFile(char *fileName)
+extern char **statFile(char restrict *fileName)
 {
     struct stat st;
     int fd = open(fileName, O_RDONLY)
