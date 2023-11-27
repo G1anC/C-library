@@ -7,14 +7,14 @@
 
 #include "../../INCLUDE/my.h"
 
-char **statFile(char *name)
+char **statFile(char *fileName)
 {
     struct stat st;
-    int fd = open(name, O_RDONLY)
+    int fd = open(fileName, O_RDONLY)
     char *buffer = NULL;
     char **arr = NULL;
     
-    if (!stat(name, &st) || !st.st_size || !fd)
+    if (!stat(fileName, &st) || !st.st_size || !fd)
         exitErr("ERROR : Invalid file provided.\n");
     read(fd, buffer, st.st_size);
     buffer[st.st_size] = '\0';

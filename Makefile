@@ -5,42 +5,9 @@
 ## Makefile
 ##
 
-NAME	=	project_name
+BIN	=	project_BIN
 
-SRC		=	main.c \
-			LIB/cat.c \
-			LIB/cmp.c \
-			LIB/cpy.c \
-			LIB/dup.c \
-			LIB/len.c \
-			LIB/ncpy.c \
-			LIB/ncat.c \
-			LIB/ncmp.c \
-			LIB/pbrk.c \
-			SRC/init.c \
-			SRC/tools.c \
-			LIB/arrlen.c \
-			LIB/getNbr.c \
-			LIB/arrTok.c \
-			LIB/freeArr.c \
-			LIB/isAlpha.c \
-			LIB/exitErr.c \
-			LIB/strToArr.c \
-			LIB/nbrToStr.c \
-			SRC/ALGO/algo.c \
-			LIB/isExisting.c \
-			LIB/splitString.c \
-			LIB/PRINTF/putArr.c \
-			LIB/PRINTF/putPtr.c \
-			LIB/PRINTF/putNbr.c \
-			LIB/PRINTF/putStr.c \
-			SRC/PARSER/parser.c \
-			SRC/error_handling.c \
-			LIB/PRINTF/putChar.c \
-			LIB/PRINTF/putFloat.c \
-			LIB/PRINTF/my_printf.c \
-			LIB/READFILES/getFile.c \
-			LIB/READFILES/statFile.c \
+SRC 	=	$(shell find ./ ./SRC/ ./SRC/ALGO/ ./LIB/ ./LIB/PRINTF/ ./LIB/READFILES/ -name "*.c")
 
 OBJ		 =	$(SRC:.c=.o)
 
@@ -52,7 +19,7 @@ CFLAGS	+=	-g -I./INCLUDE
 
 all :
 	@clear
-	@gcc -o $(NAME) $(SRC) $(CFLAGS)
+	@gcc -o $(BIN) $(SRC) $(CFLAGS)
 	@mkdir $(BUILT_DIR)
 	@mv $(OBJ) ./$(BUILT_DIR)
 	@echo -e "\n\n\n"
@@ -87,7 +54,7 @@ clean :
 fclean :
 	@clear
 	@rm -rf $(BUILT_DIR)
-	@rm $(NAME)
+	@rm $(BIN)
 	@rm vgcore.*
 	@rm coding-style-reports.log
 	@echo -e "\n\n\n"
@@ -106,10 +73,10 @@ fclean :
 re :
 	@clear
 	@rm -rf $(BUILT_DIR)
-	@rm $(NAME)
+	@rm $(BIN)
 	@rm vgcore.*
 	@rm coding-style-reports.log
-	@gcc -o $(NAME) $(SRC) $(CFLAGS)
+	@gcc -o $(BIN) $(SRC) $(CFLAGS)
 	@mkdir $(BUILT_DIR)
 	@mv $(OBJ) ./$(BUILT_DIR)
 	@echo -e "\n\n\n"
@@ -128,7 +95,7 @@ re :
 cs:
 	@clear
 	@rm -rf $(BUILT_DIR)
-	@rm $(NAME)
+	@rm $(BIN)
 	@rm vgcore.*
 	@rm coding-style-reports.log
 	@coding-style . . > /dev/null/
@@ -138,7 +105,7 @@ cs:
 
 commit:
 	@rm -rf $(BUILT_DIR)
-	@rm $(NAME)
+	@rm $(BIN)
 	@rm vgcore.*
 	@rm coding-style-reports.log
 	@git add -A
@@ -161,3 +128,39 @@ commit:
 	@echo -e "\n\n\n"
 
 .PHONY: all clean fclean re
+
+
+# SRC		=	main.c \
+# 			LIB/cat.c \
+# 			LIB/cmp.c \
+# 			LIB/cpy.c \
+# 			LIB/dup.c \
+# 			LIB/len.c \
+# 			LIB/ncpy.c \
+# 			LIB/ncat.c \
+# 			LIB/ncmp.c \
+# 			LIB/pbrk.c \
+# 			SRC/init.c \
+# 			SRC/tools.c \
+# 			LIB/arrlen.c \
+# 			LIB/getNbr.c \
+# 			LIB/arrTok.c \
+# 			LIB/freeArr.c \
+# 			LIB/isAlpha.c \
+# 			LIB/exitErr.c \
+# 			LIB/strToArr.c \
+# 			LIB/nbrToStr.c \
+# 			SRC/ALGO/algo.c \
+# 			LIB/isExisting.c \
+# 			LIB/splitString.c \
+# 			LIB/PRINTF/putArr.c \
+# 			LIB/PRINTF/putPtr.c \
+# 			LIB/PRINTF/putNbr.c \
+# 			LIB/PRINTF/putStr.c \
+# 			SRC/PARSER/parser.c \
+# 			SRC/error_handling.c \
+# 			LIB/PRINTF/putChar.c \
+# 			LIB/PRINTF/putFloat.c \
+# 			LIB/PRINTF/my_printf.c \
+# 			LIB/READFILES/getFile.c \
+# 			LIB/READFILES/statFile.c \

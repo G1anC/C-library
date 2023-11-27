@@ -11,6 +11,9 @@
 #include "../INCLUDE/my.h"
 
 #define PTR sizeof(char *)
+#define START_NOALPHA (i == 0 && str[i] != ALPHA) // if there is a no_alphanumeric character at the start of the string
+#define NEW_LINE (str[i] != ALPHA && str[i - 1] == ALPHA) // if we end a word and the next character isn't alphanumeric
+#define IN_NOALPHA_PART (str[i - 1] != ALPHA && str[i] != ALPHA) // if we already are in a non alphanumeric part of the string
 
 int nbrOfLigns(char *tmp)
 {
@@ -26,7 +29,7 @@ char **mallocWork(char *str)
     int wordSize = 0;
 
     for (int i = 0; str[i]; i++) {
-        if (BAD_START || NOALPHA_SUITE)
+        if (START_NOALPHA || IN_NOALPHA_PART)
             continue;
         if (NEW_LINE) {
             *(arr++) = malloc(wordSize + 1);
@@ -42,7 +45,7 @@ void strToArr(char *str, char **arr)
     int col = 0;
 
     for (int i = 0; str[i]; i++) {
-        if (BAD_START || NOALPHA_SUITE)
+        if (START_NOALPHA || IN_NOALPHA_PART)
             continue;
         if (NEW_LINE) {
             *(arr++)[col] = '\0';
