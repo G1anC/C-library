@@ -142,7 +142,7 @@ commit:
 # 			LIB/pbrk.c \
 # 			SRC/init.c \
 # 			SRC/tools.c \
-# 			LIB/arrlen.c \
+# 			LIB/arrsplitString.c \
 # 			LIB/getNbr.c \
 # 			LIB/arrTok.c \
 # 			LIB/freeArr.c \

@@ -9,11 +9,11 @@
 
 extern char *ncat(char *dest, char const *src, int nb)
 {
-    int len = len(dest)
+    int slen = len(dest)
     int i = 0;
 
     for (; i < nb && src[i] != '\0'; i++)
-        dest[len + i] = src[i];
-    dest[len + i] = '\0';
+        dest[slen + i] = src[i];
+    dest[slen + i] = '\0';
     return dest;
 }
