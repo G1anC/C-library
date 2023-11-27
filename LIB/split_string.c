@@ -5,7 +5,7 @@
 ** split_string
 */
 
-#include "../INCLUDE/my.h"
+
 
 #define PTR sizeof(char *)
 
@@ -16,13 +16,13 @@ static char **algo(char *str, char **arr, char *sep, int pos)
     for (; !isExisting(sep, str[i]) && str[i]; i++);
     arr[pos] = malloc(i + 1);
     if (( i > 0 && !isExisting(sep, str[i - 1])) && isExisting(sep, str[i])) {
-        my_strncpy(arr[pos], str, i);
-        pos += (my_strlen(arr[pos]));
+        ncpy(arr[pos], str, i);
+        pos += (len(arr[pos]));
     }
     if (!str[i]) {
         if (i > 0 && !isExisting(sep, str[i - 1]))
-            my_strncpy(arr[pos++], str, i);
-        arr[pos] = NULL;
+            ncpy(arr[pos++], str, i);
+        arr[pos] = (char *) 0;
         return arr;
     }
     return algo(&str[i + 1], arr, sep, pos);

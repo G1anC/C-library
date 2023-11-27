@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_strncmp
+** ncmp
 ** File description:
 ** description
 */
 
-int my_strncmp(char const *s1, char const *s2, int n)
+int ncmp(char const *s1, char const *s2, int n)
 {
     int diff = 0;
 

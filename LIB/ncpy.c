@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_strncpy
+** ncpy
 ** File description:
 ** description
 */
 
 #include "../INCLUDE/my.h"
 
-char *my_strncpy(char *dest, char *src, int size)
+char *ncpy(char *dest, char *src, int size)
 {
     int i = 0;
 

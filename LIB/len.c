@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2023
-** my_strlen.c
+** len.c
 ** File description:
-** my_strlen
+** len
 */
 
-int my_strlen(char *str)
+int len(char *str)
 {
     int i = 0;
 

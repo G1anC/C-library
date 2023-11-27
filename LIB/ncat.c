@@ -1,15 +1,15 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_strncat
+** ncat
 ** File description:
 ** description
 */
 
 #include "INCLUDE/my.h"
 
-extern char *my_strncat(char *dest, char const *src, int nb)
+extern char *ncat(char *dest, char const *src, int nb)
 {
-    int len = my_strlen(dest)
+    int len = len(dest)
     int i = 0;
 
     for (; i < nb && src[i] != '\0'; i++)

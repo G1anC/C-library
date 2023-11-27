@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-void putArray(char **array)
+void putArr(char **array)
 {
     while (*(array++) != NULL)
         my_printf("%s\n", *array);

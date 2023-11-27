@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_strcpy
+** cpy
 ** File description:
 ** description
 */
 
 #include "../INCLUDE/my.h"
 
-extern char *my_strcpy(char *dest, char const *src)
+extern char *cpy(char *dest, char const *src)
 {
     int i = 0;
 

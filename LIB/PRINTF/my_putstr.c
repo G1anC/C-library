@@ -11,7 +11,7 @@ int my_putstr(int fd, char *str)
 {
     char *err_mess = "Write failed -> invalid arguments";
 
-    if (write(fd, str, my_strlen(str)) == -1) {
+    if (write(fd, str, len(str)) == -1) {
         my_putstr(2, err_mess);
         return 84;
     }

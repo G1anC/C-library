@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2018
-** my_realloc
+** realo
 ** File description:
-** my_realloc function
+** realo function
 */
 
 # include "../INCLUDE/my.h"
@@ -27,13 +27,13 @@ char *my_realo(void *ptr, int prev, int new)
 	return new;
 }
 
-char *my_realloc(char *src, int to_add)
+char *realo(char *src, int to_add)
 {
   	char *str;
   	int i = 0;
 
   	while (src[i++]);
-  	str = my_strncpy(malloc(i + to_add + 2), src, my_strlen(src));
+  	str = ncpy(malloc(i + to_add + 2), src, len(src));
   	free(src);
   	return str;
 }

@@ -1,41 +1,43 @@
 /*
 ** EPITECH PROJECT, 2023
-** myStrToWordArray.C
+** strToArr.C
 ** File description:
-** myStrToWordArray
+** strToArr
 */
 
 // appel de fonction
-// myStrToWordArray(str, mallocWork(str));
+// strToArr(str, mallocWork(str));
 
 #include "../INCLUDE/my.h"
 
 #define PTR sizeof(char *)
 
-int nbrOfLigns(char *str, char *tmp)
+int nbrOfLigns(char *tmp)
 {
     int ligns = 0;
 
-    for (; *str++; ligns += (PTR * (*str != ALPHA && *(str - 1) == ALPHA)));
+    for (; *tmp++; ligns += (PTR * (*tmp != ALPHA && *(tmp - 1) == ALPHA)));
     return ligns;
 }
 
 char **mallocWork(char *str)
 {
-    char **arr = malloc(nbrOfLigns(str, my_strdup(str)) + PTR);
+    char **arr = malloc(nbrOfLigns(dup(str)) + PTR);
     int wordSize = 0;
 
     for (int i = 0; str[i]; i++) {
         if (BAD_START || NOALPHA_SUITE)
             continue;
-        if (NEW_LINE)
+        if (NEW_LINE) {
             *(arr++) = malloc(wordSize + 1);
-        wordSize++;
+            wordSize = 0;
+        } else
+            wordSize++;
     }
     return arr;
 }
 
-void myStrToWordArray(char *str, char **arr)
+void strToArr(char *str, char **arr)
 {
     int col = 0;
 

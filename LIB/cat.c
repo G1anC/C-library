@@ -1,15 +1,15 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_strcat
+** cat
 ** File description:
 ** description
 */
 
 #include "../INCLUDE/my.h"
 
-char *my_strcat(char *dest, char const *src)
+char *cat(char *dest, char const *src)
 {
-    int len = my_strlen(dest)
+    int len = len(dest)
     int i = 0;
 
     while (src[i++])

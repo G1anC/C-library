@@ -7,7 +7,7 @@
 
 #include "../../INCLUDE/my.h"
 
-char **getline_reader(char *name)
+char **getFile(char *name)
 {
     int i = 0;
     char **result = malloc(10000);
@@ -15,7 +15,7 @@ char **getline_reader(char *name)
     FILE *file = fopen(name, "r");
 
     if (!fopen(name, "r")) 
-        exitErr("no file for u babe\n");
+        exitErr("ERROR : Invalid file provided.\n");
     while (getline(&result[i++], &size, file) != EOF);
     result[i] = NULL;
     fclose(file);

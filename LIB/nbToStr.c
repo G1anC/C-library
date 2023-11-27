@@ -15,8 +15,8 @@ char *nbToStr(int nb)
     if (nb == 0)
         return "0";
     for (; (tmp / 10) < 10; tmp /= 10) {
-        my_strncat(str, (char *) &(tmp % 10 + '0'), 1);
+        ncat(str, (char *) &(tmp % 10 + '0'), 1);
         tmp -= (tmp % 10);
     } 
-    return (nb < 0) ? my_strcat("-", str) : str;
+    return (nb < 0) ? cat("-", str) : str;
 }

@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_strcmp
+** cmp
 ** File description:
 ** description
 */
 
 #include "../INCLUDE/my.h"
 
-int my_strcmp(char *s1, char *s2)
+int cmp(char *s1, char *s2)
 {
     int diff = 0;
 

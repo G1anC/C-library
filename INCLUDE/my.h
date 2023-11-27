@@ -58,36 +58,36 @@
         int is_existing(char *, char);
 
         // returns the length of parameter
-        int my_strlen(char *);
+        int len(char *);
 
         // returns the int value of the string given as parameter
         int my_getnbr(char *);
 
         // returns the first string, copy of the 2nd
-        char *my_strcpy(char *, char const *);
+        char *cpy(char *, char const *);
 
         // returns the first string, copy of the 2nd (of size n)
-        char *my_strncpy(char *, char *, int);
+        char *ncpy(char *, char *, int);
 
         // compares 2 strings
         // returns 0 if same
-        int my_strcmp(char const *, char const *);
+        int cmp(char const *, char const *);
 
         // compares 2 strings based on size n,
         // returns 0 if same
-        int my_strncmp(char const *, char const *, int);
+        int ncmp(char const *, char const *, int);
 
         // returns a string glued with another
-        char *my_strcat(char *, char const *);
+        char *cat(char *, char const *);
 
         // returns a string glued with another (of size n)
-        char *my_strncat(char *, char const *, int);
+        char *ncat(char *, char const *, int);
 
         // print an array with a \n in between strings
         void my_print_array(char **);
 
         // separates string into an array :
-        void myStrToWordArray(char *str, char **arr);
+        void strToArr(char *str, char **arr);
 
         // array length calculator
         int arrlen(char **);
@@ -108,7 +108,7 @@
         char **mallocWork(char *str);
 
         // returns a dupliacte of the string given as parameter
-        char *my_strdup(char const *str);
+        char *dup(char const *str);
 
     // L I B R A R Y  D E F I N E S
 

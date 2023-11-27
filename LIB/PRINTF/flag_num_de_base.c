@@ -19,7 +19,7 @@ void flag_i(va_list list)
 
 int my_put_nbr_unsigned(unsigned int nb)
 {
-    unsigned int compt = 0;
+    int compt = 0;
 
     if (nb < 0) {
         my_putchar('-');

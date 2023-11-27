@@ -17,24 +17,25 @@ SRC		=	main.c \
 			LIB/putarr.c \
 			LIB/free_arr.c \
 			LIB/is_alpha.c \
-			LIB/my_strcat.c \
-			LIB/my_strcmp.c \
-			LIB/my_strcpy.c \
-			LIB/my_strdup.c \
-			LIB/my_strlen.c \
+			LIB/cat.c \
+			LIB/cmp.c \
+			LIB/cpy.c \
+			LIB/dup.c \
+			LIB/len.c \
+			LIB/pbrk.c \
 			LIB/my_getnbr.c \
 			LIB/array_tok.c \
 			LIB/exitErr.c \
-			LIB/my_strncat.c \
-			LIB/my_strncpy.c \
-			LIB/my_strncmp.c \
+			LIB/ncat.c \
+			LIB/ncpy.c \
+			LIB/ncmp.c \
 			LIB/is_existing.c \
 			LIB/split_string.c \
 			LIB/PRINTF/flag_maj.c \
 			LIB/PRINTF/flag_num.c \
 			LIB/PRINTF/flag_supp.c \
 			LIB/PRINTF/my_printf.c \
-			LIB/myStrToWordArray.c \
+			LIB/strToArr.c \
 			LIB/PRINTF/my_putstr.c \
 			LIB/PRINTF/my_putchar.c \
 			LIB/PRINTF/my_put_nbr.c \
