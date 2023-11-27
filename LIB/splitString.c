@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2023
-** split_string.c
+** splitString.c
 ** File description:
-** split_string
+** splitString
 */
 
 

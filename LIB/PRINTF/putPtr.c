@@ -12,6 +12,6 @@ void flag_p(va_list list)
     int i = va_arg(list, void*);
     int *a = &i;
 
-    my_putstr(1, "Ox");
+    putStr(1, "Ox");
     argx(*a);
 }

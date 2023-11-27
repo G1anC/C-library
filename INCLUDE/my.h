@@ -45,11 +45,11 @@
         void flag_f(va_list list);
         void flag_b(va_list list);
         void flag_x_maj(va_list list);
-        double my_put_float(double f);
+        double putFloat(double f);
         void argx(int arg);
-        int my_put_nbr(int);
-        int my_putstr(int fd, char *);
-        void my_putchar(char c);
+        int putNbr(int);
+        int putStr(int fd, char *);
+        void putChar(char c);
 
     // L I B R A R Y  F U N C T I O N S
 
@@ -61,7 +61,7 @@
         int len(char *);
 
         // returns the int value of the string given as parameter
-        int my_getnbr(char *);
+        int getNbr(char *);
 
         // returns the first string, copy of the 2nd
         char *cpy(char *, char const *);
@@ -96,7 +96,7 @@
         void putArray(char **array);
 
         // str to word array based on character that seperates the words
-        char **split_string(char *, char);
+        char **splitString(char *, char);
 
         // str to word array boosted with LSD
         char **array_tok(char *, char *);

@@ -13,39 +13,34 @@ SRC		=	main.c \
 			SRC/ALGO/algo.c \
 			SRC/PARSER/parser.c \
 			SRC/error_handling.c \
-			LIB/arrlen.c \
-			LIB/putarr.c \
-			LIB/free_arr.c \
-			LIB/is_alpha.c \
 			LIB/cat.c \
 			LIB/cmp.c \
 			LIB/cpy.c \
 			LIB/dup.c \
 			LIB/len.c \
-			LIB/pbrk.c \
-			LIB/my_getnbr.c \
-			LIB/array_tok.c \
-			LIB/exitErr.c \
-			LIB/ncat.c \
 			LIB/ncpy.c \
+			LIB/ncat.c \
 			LIB/ncmp.c \
-			LIB/is_existing.c \
-			LIB/split_string.c \
-			LIB/PRINTF/flag_maj.c \
-			LIB/PRINTF/flag_num.c \
-			LIB/PRINTF/flag_supp.c \
-			LIB/PRINTF/my_printf.c \
+			LIB/pbrk.c \
+			LIB/arrlen.c \
+			LIB/getNbr.c \
+			LIB/arrTok.c \
+			LIB/freeArr.c \
+			LIB/isAlpha.c \
+			LIB/exitErr.c \
 			LIB/strToArr.c \
-			LIB/PRINTF/my_putstr.c \
-			LIB/PRINTF/my_putchar.c \
-			LIB/PRINTF/my_put_nbr.c \
-			LIB/signed_int_to_str.c \
-			LIB/PRINTF/flag_strings.c \
-			LIB/PRINTF/my_put_float.c \
-			LIB/PRINTF/flag_pointeur.c \
-			LIB/READFILES/stat_reader.c \
-			LIB/PRINTF/flag_num_de_base.c \
-			LIB/READFILES/getline_reader.c \
+			LIB/nbrToStr.c \
+			LIB/isExisting.c \
+			LIB/splitString.c \
+			LIB/PRINTF/putArr.c \
+			LIB/PRINTF/putPtr.c \
+			LIB/PRINTF/putNbr.c \
+			LIB/PRINTF/putStr.c \
+			LIB/PRINTF/putChar.c \
+			LIB/PRINTF/putFloat.c \
+			LIB/PRINTF/my_printf.c \
+			LIB/READFILES/getFile.c \
+			LIB/READFILES/statFile.c \
 
 OBJ		 =	$(SRC:.c=.o)
 

@@ -7,11 +7,10 @@
 
 #include "../../INCLUDE/my.h"
 
-void tableau_flags_fonctions(char character, va_list list)
+void tabFlag(char character, va_list list)
 {
-    char flags[11] = {'c', 's', 'i', 'd', '%', 'o', 'x', 'b', 'X', 'u'};
-    void (*fonctions[11])(va_list) = {flag_c, flag_s, flag_i, flag_d,
-            flag_pourcent,flag_o, flag_x, flag_b, flag_x_maj, flag_u};
+    char flags[11] = {'c', 's', 'd', 'p', 'f'};
+    void (*fonctions[11])(va_list) = {flag_c, flag_s, flag_d, flag_p, flag_f};
 
     for (int x = 0; flags[x]; x++)
         if (character == flags[x])
@@ -26,10 +25,10 @@ int my_printf(char const *str, ...)
     va_start(list, *str);
     for (i = 0; str[i]; i++) {
         if (str[i] == '%') {
-            tableau_flags_fonctions(str[++i], list);
+            tabFlag(str[++i], list);
             continue;
         }
-        my_putchar(str[i]);
+        putChar(str[i]);
     }
     va_end(list);
     return 0;
