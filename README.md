@@ -8,8 +8,9 @@ You can find :
   
   *  My entire library, from "piscine" exercices to functions built along the year.
    
-  *  Explanations of every library functions in "my.h" file.
+  *  Explanations of every library functions in ```INCLUDE/my.h``` file.
     
+  <br>
   <br>
 
 
@@ -26,6 +27,7 @@ _________                       .__.__          __  .__                  _______
         \/             \/|__|                \/                    \/            \/            \/     \/
 ```
 <br>
+<br>
 
   * ```clean```---> removal of OBJ(ect) files.
 ```
@@ -36,6 +38,7 @@ __________                   __               __      _________ .__             
  |____|     |__|   \____/\__|  |\___  >\___  >__|      \______  /____/\___  >____  /___|  /\___  >____ |
                         \______|    \/     \/                 \/          \/     \/     \/     \/     \/
 ```
+<br>
 <br>
 
   * ```fclean```--> clean project from any unwanted files.
@@ -48,6 +51,7 @@ __________      .__.__       .___   ___________                               ._
         \/                    \/            \/            \/     \/     \/     \/
 ```
 <br>
+<br>
 
   * ```re```------> cleaning project to recompile.
 ```
@@ -59,8 +63,9 @@ __________      .__.__       .___  __________                                   
         \/                    \/           \/     \/     \/           \/     \/     \/     \/          \/     \/ 
 ```
 <br>
+<br>
 
-  * ```.PHONY```--> functional test of every Makefile rules.
+  * ```.PHONY```--> functional test of every Makefile rules (except ```cs``` and ```commit``` rules).
 
   * ```cs```------> fclean trigger into EPITECH coding style checker.
 

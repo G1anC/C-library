@@ -8,11 +8,6 @@
 NAME	=	project_name
 
 SRC		=	main.c \
-			SRC/init.c \
-			SRC/tools.c \
-			SRC/ALGO/algo.c \
-			SRC/PARSER/parser.c \
-			SRC/error_handling.c \
 			LIB/cat.c \
 			LIB/cmp.c \
 			LIB/cpy.c \
@@ -22,6 +17,8 @@ SRC		=	main.c \
 			LIB/ncat.c \
 			LIB/ncmp.c \
 			LIB/pbrk.c \
+			SRC/init.c \
+			SRC/tools.c \
 			LIB/arrlen.c \
 			LIB/getNbr.c \
 			LIB/arrTok.c \
@@ -30,12 +27,15 @@ SRC		=	main.c \
 			LIB/exitErr.c \
 			LIB/strToArr.c \
 			LIB/nbrToStr.c \
+			SRC/ALGO/algo.c \
 			LIB/isExisting.c \
 			LIB/splitString.c \
 			LIB/PRINTF/putArr.c \
 			LIB/PRINTF/putPtr.c \
 			LIB/PRINTF/putNbr.c \
 			LIB/PRINTF/putStr.c \
+			SRC/PARSER/parser.c \
+			SRC/error_handling.c \
 			LIB/PRINTF/putChar.c \
 			LIB/PRINTF/putFloat.c \
 			LIB/PRINTF/my_printf.c \
@@ -46,13 +46,15 @@ OBJ		 =	$(SRC:.c=.o)
 
 MSG		 =	""
 
+BUILT_DIR = BUILT/
+
 CFLAGS	+=	-g -I./INCLUDE
 
 all :
 	@clear
 	@gcc -o $(NAME) $(SRC) $(CFLAGS)
-	@mkdir BUILD_DIR/
-	@mv $(OBJ) ./BUILD_DIR/
+	@mkdir $(BUILT_DIR)
+	@mv $(OBJ) ./$(BUILT_DIR)
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -68,7 +70,7 @@ all :
 
 clean :
 	@clear
-	@rm -rf BUILD_DIR/
+	@rm -rf $(BUILT_DIR)
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -84,7 +86,7 @@ clean :
 
 fclean :
 	@clear
-	@rm -rf BUILD_DIR/
+	@rm -rf $(BUILT_DIR)
 	@rm $(NAME)
 	@rm vgcore.*
 	@rm coding-style-reports.log
@@ -103,13 +105,13 @@ fclean :
 
 re :
 	@clear
-	@rm -rf BUILD_DIR/
+	@rm -rf $(BUILT_DIR)
 	@rm $(NAME)
 	@rm vgcore.*
 	@rm coding-style-reports.log
 	@gcc -o $(NAME) $(SRC) $(CFLAGS)
-	@mkdir BUILD_DIR/
-	@mv $(OBJ) ./BUILD_DIR/
+	@mkdir $(BUILT_DIR)
+	@mv $(OBJ) ./$(BUILT_DIR)
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -125,7 +127,7 @@ re :
 
 cs:
 	@clear
-	@rm -rf BUILD_DIR/
+	@rm -rf $(BUILT_DIR)
 	@rm $(NAME)
 	@rm vgcore.*
 	@rm coding-style-reports.log
@@ -135,7 +137,7 @@ cs:
 	@echo -e "\n"
 
 commit:
-	@rm -rf BUILD_DIR/
+	@rm -rf $(BUILT_DIR)
 	@rm $(NAME)
 	@rm vgcore.*
 	@rm coding-style-reports.log
