@@ -7,7 +7,7 @@
 
 # include "../INCLUDE/my.h"
 
-static void *my_memalloc(int size)
+static void *my_memalloc(size_t size)
 {
 	void *mem = malloc(size);
 
@@ -16,12 +16,12 @@ static void *my_memalloc(int size)
 	return mem;
 }
 
-extern char *my_realloc(void *ptr, int prev, int new)
+extern char *my_realloc(void *ptr, size_t prev, size_t new)
 {
 	void *new = my_memalloc(new);
-	int big = (prev < new) ? prev : new;
+	size_t big = (prev < new) ? prev : new;
 
-	for (int i = 0; i < big; i++)
+	for (size_t i = 0; i < big; i++)
 		(PTR new)[i] = (PTR ptr)[i];
 	free(ptr);
 	return new;
