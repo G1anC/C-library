@@ -1,27 +1,27 @@
 /*
 ** EPITECH PROJECT, 2022
-** putNbr
+** put_nbr
 ** File description:
 ** description
 */
 
 #include "../../INCLUDE/my.h"
 
-void putNbr(int nb)
+void put_nbr(int nb)
 {
     if (nb < 0) {
-        putChar('-');
+        put_char('-');
         nb *= -1;
     }
     if (nb >= 10) {
-        putNbr(nb / 10);
-        putNbr(nb % 10);
+        put_nbr(nb / 10);
+        put_nbr(nb % 10);
     } else {
-        putChar(nb + '0');
+        put_char(nb + '0');
     }
 }
 
 void flag_d(va_list list)
 {
-    putNbr(va_arg(list, int));
+    put_nbr(va_arg(list, int));
 }

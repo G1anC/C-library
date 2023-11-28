@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2023
-** strToArr.C
+** str_to_arr.C
 ** File description:
-** strToArr
+** str_to_arr
 */
 
 
@@ -19,7 +19,7 @@
 // if we already are in a non alphanumeric part of the string
 #define IN_NOALPHA_PART (str[i - 1] != ALPHA && str[i] != ALPHA)
 
-static size_t nbrOfLigns(char *tmp)
+static size_t nbr_of_ligns(char *tmp)
 {
     size_t ligns = 0;
 
@@ -27,16 +27,16 @@ static size_t nbrOfLigns(char *tmp)
     return ligns;
 }
 
-extern char **mallocWork(char *str)
+extern char **malloc_work(char *str)
 {
-    char **arr = malloc(nbrOfLigns(dup(str)) + PTR);
+    char **arr = malloc(nbr_of_ligns(dup(str)) + PTR);
     int wordSize = 0;
 
     for (size_t i = 0; str[i]; i++) {
         if (START_NOALPHA || IN_NOALPHA_PART)
             continue;
         if (NEW_LINE) {
-            *(arr++) = malloc(wordSize + 1);
+            *(arr++) = malloc(++wordSize);
             wordSize = 0;
         } else
             wordSize++;
@@ -45,9 +45,9 @@ extern char **mallocWork(char *str)
 }
 
 // appel de fonction
-// strToArr(str, mallocWork(str));
+// str_to_arr(str, malloc_work(str));
 
-extern void strToArr(char restrict *str, char **arr)
+extern void str_to_arr(char restrict *str, char **arr)
 {
     size_t col = 0;
 

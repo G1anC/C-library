@@ -1,18 +1,18 @@
 /*
 ** EPITECH PROJECT, 2023
-** putStr.c
+** put_str.c
 ** File description:
-** putStr
+** put_str
 */
 
 #include "../../INCLUDE/my.h"
 
-int putStr(int fd, char *str)
+int put_str(int fd, char *str)
 {
     char *err_mess = "Write failed -> invalid arguments.\n\n";
 
     if (write(fd, str, len(str)) == -1) {
-        putStr(2, err_mess);
+        put_str(2, err_mess);
         return 84;
     }
     return 0;
@@ -20,5 +20,5 @@ int putStr(int fd, char *str)
 
 void flag_s(va_list list)
 {
-    putStr(1, va_arg(list, char*));
+    put_str(1, va_arg(list, char*));
 }

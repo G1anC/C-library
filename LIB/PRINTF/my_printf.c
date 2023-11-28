@@ -7,7 +7,7 @@
 
 #include "../../INCLUDE/my.h"
 
-void tabFlag(char character, va_list list)
+void tab_flag(char character, va_list list)
 {
     char *flags = "csdpf";
     void (*fonctions[11])(va_list) = {flag_c, flag_s, flag_d, flag_p, flag_f};
@@ -25,10 +25,10 @@ int my_printf(char const restrict *str, ...)
     va_start(list, *str);
     for (i = 0; str[i]; i++) {
         if (str[i] == '%') {
-            tabFlag(str[++i], list);
+            tab_flag(str[++i], list);
             continue;
         }
-        putChar(str[i]);
+        put_char(str[i]);
     }
     va_end(list);
     return 0;

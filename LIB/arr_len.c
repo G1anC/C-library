@@ -5,7 +5,7 @@
 ** my_arraylen
 */
 
-extern int arrlen(char **array)
+extern int arr_len(char **array)
 {
     int i = 0;
 

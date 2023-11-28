@@ -7,7 +7,7 @@
 
 #include "../../INCLUDE/my.h"
 
-extern char **getFile(char restrict *name)
+extern char **get_file(char restrict *name)
 {
     int i = 0;
     size_t size = 0;
@@ -15,7 +15,7 @@ extern char **getFile(char restrict *name)
     FILE *file = fopen(name, "r");
 
     if (!fopen(name, "r")) 
-        exitErr("ERROR : Invalid file provided.\n");
+        exit_err("ERROR : Invalid file provided.\n");
     while (getline(&result[i++], &size, file) != EOF);
     result[i] = NULL;
     fclose(file);

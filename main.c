@@ -21,7 +21,7 @@ int core(p_t *p)
 
 int help(void)
 {
-    exitErr("USAGE : Project\n"
+    exit_err("USAGE : Project\n"
         "\t--help : display help message\n"
         "\t-l : show i don't know\n");
 }
@@ -31,5 +31,5 @@ int main(int ac, char **av)
     if (ac != 2)
         return 84;
     return (!ncmp("-h", av[1], 2)) ?
-            help() : core(&(p_t){0, strToArr(readfile(av[1]))});
+            help() : core(&(p_t){0, str_to_arr(stat_file(av[1]))});
 }

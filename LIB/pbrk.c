@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-static char *cmpCharacters(char _c1, char *_cmp)
+static char *cmp_characters(char _c1, char *_cmp)
 {
     for (size_t i = 0; _cmp[i]; i++)
         if (_c1 == _cmp[i])
@@ -20,7 +20,7 @@ extern char *pbrk(char *str, char *_toFind)
     char *res = NULL;
 
     for (size_t i = 0; str[i]; i++) {
-        res = cmpCharacters(str[i], _toFind);
+        res = cmp_characters(str[i], _toFind);
         if (res)
             return res;
     }

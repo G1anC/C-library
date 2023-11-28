@@ -7,9 +7,9 @@
 
 #include "../INCLUDE/my.h"
 
-extern void exitErr(char *errMess)
+extern void exit_err(char *errMess)
 {
-    putStr(2, errMess);
+    put_str(2, errMess);
     register int rdi asm("rdi") = 84;
     register int rax asm("rax") = 60;
     asm("syscall");

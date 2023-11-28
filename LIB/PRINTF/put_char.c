@@ -1,18 +1,18 @@
 /*
 ** EPITECH PROJECT, 2022
-** putChar
+** put_char
 ** File description:
 ** my_printf en meilleur
 */
 
 #include "../../INCLUDE/my.h"
 
-void putChar(char c)
+void put_char(char c)
 {
     write(1, &c, 1);
 }
 
 void flag_c(va_list list)
 {
-    putChar(va_arg(list, int));
+    put_char(va_arg(list, int));
 }

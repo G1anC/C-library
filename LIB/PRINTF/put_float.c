@@ -10,15 +10,15 @@
 void my_pfloat(double f, int x)
 {
     if (x < 0) {
-        putChar('-');
+        put_char('-');
         f *= -1;
     }
     my_printf("%d.", (int)f);
     for (int i = 0; i++ < 5; f *= 10) {
         f -= (int)f;
-        putNbr((int)f);
+        put_nbr((int)f);
     }
-    putNbr((int)f);
+    put_nbr((int)f);
 }
 
 void putFloat(double nbr)

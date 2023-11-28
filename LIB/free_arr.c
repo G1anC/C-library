@@ -2,12 +2,12 @@
 ** EPITECH PROJECT, 2023
 ** free_arr.c
 ** File description:
-** getNbr
+** get_nbr
 */
 
 #include "../INCLUDE/my.h"
 
-extern void freeArr(char **array)
+extern void free_arr(char **array)
 {
     for (int i = 0; array[i] != NULL; i++)
         free(array[i]);

@@ -47,9 +47,9 @@
         void flag_x_maj(va_list list);
         double putFloat(double f);
         void argx(int arg);
-        int putNbr(int);
-        int putStr(int fd, char *);
-        void putChar(char c);
+        int put_nbr(int);
+        int put_str(int fd, char *);
+        void put_char(char c);
 
     // L I B R A R Y  F U N C T I O N S
 
@@ -61,7 +61,7 @@
         int len(char *);
 
         // returns the int value of the string given as parameter
-        int getNbr(char *);
+        int get_nbr(char *);
 
         // returns the first string, copy of the 2nd
         char *cpy(char *, char const *);
@@ -87,25 +87,25 @@
         void my_print_array(char **);
 
         // separates string into an array :
-        void strToArr(char *str, char **arr);
+        void str_to_arr(char *str, char **arr);
 
         // array length calculator
         int arrlen(char **);
 
         // printf an array
-        void putArray(char **array);
+        void put_array(char **array);
 
         // str to word array based on character that seperates the words
-        char **splitString(char *, char);
+        char **split_string(char *, char);
 
         // str to word array boosted with LSD
         char **array_tok(char *, char *);
 
         // exit with error message
-        void exitErr(char *errMess);
+        void exit_err(char *errMess);
 
         // return an allocated array from a string
-        char **mallocWork(char *str);
+        char **malloc_work(char *str);
 
         // returns a dupliacte of the string given as parameter
         char *dup(char const *str);

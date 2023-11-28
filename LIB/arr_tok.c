@@ -16,7 +16,7 @@ static int my_toklen(char *str, char *sep)
     return (++ligns) * PTR;
 }
 
-extern char **arrTok(char *str, char *sep)
+extern char **arr_tok(char *str, char *sep)
 {
     char **array = malloc(my_toklen(str, sep));
     char *word = strtok(str, sep);

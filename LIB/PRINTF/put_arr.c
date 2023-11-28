@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2023
-** putarr.c
+** put_arr.c
 ** File description:
-** putarr
+** put_arr
 */
 
 #include "../INCLUDE/my.h"
 
-void putArr(char **array)
+void put_arr(char **array)
 {
     while (*(array++) != NULL)
         my_printf("%s\n", *array);
