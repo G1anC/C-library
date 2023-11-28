@@ -21,8 +21,9 @@ extern char **arrTok(char *str, char *sep)
     char **array = malloc(my_toklen(str, sep));
     char *word = strtok(str, sep);
 
-    do {
+    while (word) {
         *(array++) = word;
-    } while ((word = strtok(NULL, sep)) != NULL);
+        word = strtok(NULL, sep)
+    }
     return array;
 }

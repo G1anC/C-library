@@ -19,8 +19,10 @@ extern char *pbrk(char *str, char *_toFind)
 {
     char *res = NULL;
 
-    for (size_t i = 0; str[i]; i++)
-        if ((res = cmpCharacters(str[i], _toFind)) != NULL)
+    for (size_t i = 0; str[i]; i++) {
+        res = cmpCharacters(str[i], _toFind);
+        if (res)
             return res;
+    }
     return NULL;
 }

@@ -10,15 +10,15 @@
 extern char **statFile(char restrict *fileName)
 {
     struct stat st;
-    int fd = open(fileName, O_RDONLY)
-    char *buffer = NULL;
     char **arr = NULL;
+    char *buffer = NULL;
+    int fd = open(fileName, O_RDONLY)
     
     if (!stat(fileName, &st) || !st.st_size || !fd)
         exitErr("ERROR : Invalid file provided.\n");
     read(fd, buffer, st.st_size);
-    buffer[st.st_size] = '\0';
     close(fd);
+    buffer[st.st_size] = '\0';
     strToArr(buffer, (arr = mallocWork(buffer)));
     return arr;
 }

@@ -10,8 +10,8 @@
 extern char **getFile(char restrict *name)
 {
     int i = 0;
-    char **result = malloc(10000);
     size_t size = 0;
+    char **result = malloc(10000);
     FILE *file = fopen(name, "r");
 
     if (!fopen(name, "r")) 

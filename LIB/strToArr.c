@@ -58,8 +58,8 @@ extern void strToArr(char restrict *str, char **arr)
             *(arr++)[col] = '\0';
             col = 0;
         } else
-            (*arr)[col++] = str[i];
+            *arr[col++] = str[i];
     }
     *arr[col] = '\0';
-    *(++arr) = NULL;
+    *(arr + 1) = NULL;
 }
