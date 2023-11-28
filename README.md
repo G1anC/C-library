@@ -3,11 +3,8 @@
 **This is the template i used whenever a C project started at my school (EPITECH).**
 
 You can find :
-
   *  A clear and conscise base of a C project.
-  
   *  My entire library, from "piscine" exercices to functions built along the year.
-   
   *  Explanations of every library functions in ```INCLUDE/my.h``` file.
     
   <br>
