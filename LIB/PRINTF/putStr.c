@@ -9,7 +9,7 @@
 
 int putStr(int fd, char *str)
 {
-    char *err_mess = "Write failed -> invalid arguments";
+    char *err_mess = "Write failed -> invalid arguments.\n\n";
 
     if (write(fd, str, len(str)) == -1) {
         putStr(2, err_mess);

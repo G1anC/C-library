@@ -9,11 +9,11 @@
 
 void tabFlag(char character, va_list list)
 {
-    char flags[11] = {'c', 's', 'd', 'p', 'f'};
+    char *flags = "csdpf";
     void (*fonctions[11])(va_list) = {flag_c, flag_s, flag_d, flag_p, flag_f};
 
-    for (int x = 0; flags[x]; x++)
-        if (character == flags[x])
+    for (; *flags; flags++)
+        if (character == *flags)
             (*fonctions[x])(list);
 }
 

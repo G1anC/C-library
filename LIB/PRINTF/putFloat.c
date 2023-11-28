@@ -7,60 +7,28 @@
 
 #include "../../INCLUDE/my.h"
 
-void positiv(double f, int x)
+void my_pfloat(double f, int x)
 {
-    int i = 0;
-
-    putNbr(x);
-    putChar('.');
-    f = f - x;
-    while (i < 5) {
-        f = f * 10;
-        x = (int) f;
-        putNbr(x);
-        f = f - x;
-        i++;
-    }
-    putNbr(x);
-}
-
-void negativ(double f, int x)
-{
-    int i = 0;
-
-    if (x == 0)
+    if (x < 0) {
         putChar('-');
-    putNbr(x);
-    f = f - x;
-    f = f * -1;
-    putChar('.');
-    while (i < 5) {
-        f = f * 10;
-        x = (int) f;
-        putNbr(x);
-        f = f - x;
-        i++;
+        f *= -1;
     }
-    putNbr(x);
+    my_printf("%d.", (int)f);
+    for (int i = 0; i++ < 5; f *= 10) {
+        f -= (int)f;
+        putNbr((int)f);
+    }
+    putNbr((int)f);
 }
 
-double putFloat(double nbr)
+void putFloat(double nbr)
 {
     int x = (int)nbr;
-    int i = 0;
 
-    if (nbr == x) {
+    if (nbr == x)
         my_printf("%d.000000", x);
-        return nbr;
-    }
-    if (nbr > 0) {
-        positiv(nbr, x);
-        return nbr;
-    }
-    if (nbr < 0) {
-        negativ(nbr, x);
-        return nbr;
-    }
+    else
+        my_pfloat(nbr, x);
 }
 
 void flag_f(va_list list)
