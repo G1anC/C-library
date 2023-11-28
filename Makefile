@@ -5,23 +5,26 @@
 ## Makefile
 ##
 
-BIN	=	project_BIN
+BIN		=	project_BIN
 
-SRC 	=	$(shell find ./ ./SRC/ ./SRC/ALGO/ ./LIB/ ./LIB/PRINTF/ ./LIB/READFILES/ -name "*.c")
+SRC 	=	$(shell find ./ -name *.c)
+# ./SRC/ ./SRC/ALGO/ ./LIB/ ./LIB/PRINTF/ ./LIB/READFILES/
 
-OBJ		 =	$(SRC:.c=.o)
+OBJ		=	$(SRC:.c=.o)
 
-MSG		 =	""
+MSG		=	""
 
-BUILT_DIR = BUILD/
+CFLAGS	=  -I$(INCLUDE_DIR) -Wall -Wextra -Werror -g -lm
 
-CFLAGS	+=	-g -I./INCLUDE
+INCLUDE_DIR = ./INCLUDE/
+
+BUILD_DIR = BUILD/
 
 all :
 	@clear
 	@gcc -o $(BIN) $(SRC) $(CFLAGS)
-	@mkdir $(BUILT_DIR)
-	@mv $(OBJ) ./$(BUILT_DIR)
+	@mkdir $(BUILD_DIR)
+	@mv $(OBJ) ./$(BUILD_DIR)
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -37,7 +40,7 @@ all :
 
 clean :
 	@clear
-	@rm -rf $(BUILT_DIR)
+	@rm -rf $(BUILD_DIR)
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -53,7 +56,7 @@ clean :
 
 fclean :
 	@clear
-	@rm -rf $(BUILT_DIR)
+	@rm -rf $(BUILD_DIR)
 	@rm $(BIN)
 	@rm vgcore.*
 	@rm coding-style-reports.log
@@ -72,13 +75,13 @@ fclean :
 
 re :
 	@clear
-	@rm -rf $(BUILT_DIR)
+	@rm -rf $(BUILD_DIR)
 	@rm $(BIN)
 	@rm vgcore.*
 	@rm coding-style-reports.log
 	@gcc -o $(BIN) $(SRC) $(CFLAGS)
-	@mkdir $(BUILT_DIR)
-	@mv $(OBJ) ./$(BUILT_DIR)
+	@mkdir $(BUILD_DIR)
+	@mv $(OBJ) ./$(BUILD_DIR)
 	@echo -e "\n\n\n"
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
@@ -94,17 +97,28 @@ re :
 
 cs:
 	@clear
-	@rm -rf $(BUILT_DIR)
+	@rm -rf $(BUILD_DIR)
 	@rm $(BIN)
 	@rm vgcore.*
 	@rm coding-style-reports.log
 	@coding-style . . > /dev/null/
+	@echo -e "\n\n\n"
+	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n"
+	@echo -e "                   _________            .___.__                             _________ __          .__          "
+	@echo -e "                   \_   ___ \  ____   __| _/|__| ____    ____              /   _____//  |_ ___.__.|  |   ____  "
+	@echo -e "                   /    \  \/ /  _ \ / __ | |  |/    \  / ___\    ______   \_____  \\   __<   |  ||  | _/ __ \ "
+	@echo -e "                   \     \___|  <_> | /_/ | |  |   |  \/ /_/  >  /_____/   /        \|  |  \___  ||  |_\  ___/ "
+	@echo -e "                    \______  /\____/\____ | |__|___|  /\___  /            /_______  /|__|  / ____||____/\___  >"
+	@echo -e "                           \/            \/         \//_____/                     \/       \/               \/ "
+	@echo -e "\n"
+	@echo -e "_____________________________________________________________________________________________________________________________________"
+	@echo -e "\n\n"
 	@cat coding-style-reports.log
-	@echo -e "\n"
+	@echo -e "\n\n"
 
 commit:
-	@rm -rf $(BUILT_DIR)
+	@rm -rf $(BUILD_DIR)
 	@rm $(BIN)
 	@rm vgcore.*
 	@rm coding-style-reports.log
@@ -127,40 +141,4 @@ commit:
 	@echo -e "_____________________________________________________________________________________________________________________________________"
 	@echo -e "\n\n\n"
 
-.PHONY: all clean fclean re
-
-
-# SRC		=	main.c \
-# 			LIB/cat.c \
-# 			LIB/cmp.c \
-# 			LIB/cpy.c \
-# 			LIB/dup.c \
-# 			LIB/len.c \
-# 			LIB/ncpy.c \
-# 			LIB/ncat.c \
-# 			LIB/ncmp.c \
-# 			LIB/pbrk.c \
-# 			SRC/init.c \
-# 			SRC/tools.c \
-# 			LIB/arrsplitString.c \
-# 			LIB/getNbr.c \
-# 			LIB/arrTok.c \
-# 			LIB/freeArr.c \
-# 			LIB/isAlpha.c \
-# 			LIB/exitErr.c \
-# 			LIB/strToArr.c \
-# 			LIB/nbrToStr.c \
-# 			SRC/ALGO/algo.c \
-# 			LIB/isExisting.c \
-# 			LIB/splitString.c \
-# 			LIB/PRINTF/putArr.c \
-# 			LIB/PRINTF/putPtr.c \
-# 			LIB/PRINTF/putNbr.c \
-# 			LIB/PRINTF/putStr.c \
-# 			SRC/PARSER/parser.c \
-# 			SRC/error_handling.c \
-# 			LIB/PRINTF/putChar.c \
-# 			LIB/PRINTF/putFloat.c \
-# 			LIB/PRINTF/my_printf.c \
-# 			LIB/READFILES/getFile.c \
-# 			LIB/READFILES/statFile.c \
+.PHONY: all clean fclean re cs commit
