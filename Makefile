@@ -8,7 +8,6 @@
 BIN		=	project_BIN
 
 SRC 	=	$(shell find ./ -name *.c)
-# ./SRC/ ./SRC/ALGO/ ./LIB/ ./LIB/PRINTF/ ./LIB/READFILES/
 
 OBJ		=	$(SRC:.c=.o)
 
