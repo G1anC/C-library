@@ -22,8 +22,8 @@ int core(p_t *p)
 int help(void)
 {
     exitErr("USAGE : Project\n"
-        "--help : display help message\n"
-        "-l : show i don't know\n");
+        "\t--help : display help message\n"
+        "\t-l : show i don't know\n");
 }
 
 int main(int ac, char **av)
