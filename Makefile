@@ -13,7 +13,7 @@ OBJ		 =	$(SRC:.c=.o)
 
 MSG		 =	""
 
-BUILT_DIR = BUILT/
+BUILT_DIR = BUILD/
 
 CFLAGS	+=	-g -I./INCLUDE
 
