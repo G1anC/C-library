@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2022
-** get_nbr
+** to_nbr
 ** File description:
 ** description
 */
 
 #include "../INCLUDE/my.h"
 
-extern int get_nbr(char *str)
+extern int to_nbr(char *str)
 {
     int nbr = 0;
     int sign = 1;

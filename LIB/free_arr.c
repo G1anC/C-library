@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2023
 ** free_arr.c
 ** File description:
-** get_nbr
+** free
 */
 
 #include "../INCLUDE/my.h"

@@ -61,7 +61,7 @@
         int len(char *);
 
         // returns the int value of the string given as parameter
-        int get_nbr(char *);
+        int to_nbr(char *);
 
         // returns the first string, copy of the 2nd
         char *cpy(char *, char const *);
