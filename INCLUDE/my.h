@@ -55,7 +55,7 @@
 
         // returns 0 if the 2nd parameter exists in the first
         // returns -1 if not
-        int is_existing(char *, char);
+        int index(char *, char);
 
         // returns the length of parameter
         int len(char *);
@@ -120,5 +120,7 @@
         #define DIGITS (*str >= '0' && *str <= '9')
         #define SIGN (*str == '+' && *str == '-')
         #define IS_ALPHA(c)  (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
+
+        #define errno (*_Errno())
 
 #endif /* !MY_H_ */
