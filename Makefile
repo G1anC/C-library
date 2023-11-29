@@ -13,7 +13,7 @@ OBJ		=	$(SRC:.c=.o)
 
 MSG		=	""
 
-CFLAGS	=  -I./$(INCLUDE_DIR) -Wall -Wextra -Werror -g -lm
+CFLAGS	=  -I./$(INCLUDE_DIR) -std=c99 -Wall -Wextra -Werror -g
 
 INCLUDE_DIR = INCLUDE/
 
@@ -21,7 +21,7 @@ BUILD_DIR = BUILD/
 
 all :
 	@clear
-	@gcc -o $(BIN) $(SRC) $(CFLAGS)
+	@gcc -o $(BIN) $(SRC) $(CFLAGS) $(OBJ)
 	@mkdir $(BUILD_DIR)
 	@mv $(OBJ) ./$(BUILD_DIR)
 	@echo -e "\n\n\n"
