@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2023
-** is_existing.c
+** index.c
 ** File description:
-** is_existing
+** index
 */
 
 #include "../INCLUDE/my.h"
 
-extern int is_existing(char *str, char c)
+extern int index(char *str, char c)
 {
     for (int i = 0; str[i]; i++)
         if (str[i] == c)
