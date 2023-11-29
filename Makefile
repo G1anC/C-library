@@ -13,9 +13,9 @@ OBJ		=	$(SRC:.c=.o)
 
 MSG		=	""
 
-CFLAGS	=  -I$(INCLUDE_DIR) -Wall -Wextra -Werror -g -lm
+CFLAGS	=  -I./$(INCLUDE_DIR) -Wall -Wextra -Werror -g -lm
 
-INCLUDE_DIR = ./INCLUDE/
+INCLUDE_DIR = INCLUDE/
 
 BUILD_DIR = BUILD/
 

@@ -19,6 +19,6 @@ extern char **stat_file(char restrict *fileName)
     read(fd, buffer, st.st_size);
     close(fd);
     buffer[st.st_size] = '\0';
-    str_to_arr(buffer, (arr = malloc_work(buffer)));
+    to_arr(buffer, (arr = malloc_work(buffer)));
     return arr;
 }

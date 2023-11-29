@@ -87,7 +87,7 @@
         void my_print_array(char **);
 
         // separates string into an array :
-        void str_to_arr(char *str, char **arr);
+        void to_arr(char *str, char **arr);
 
         // array length calculator
         int arrlen(char **);

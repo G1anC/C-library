@@ -31,5 +31,5 @@ int main(int ac, char **av)
     if (ac != 2)
         return 84;
     return (!ncmp("-h", av[1], 2)) ?
-            help() : core(&(p_t){0, str_to_arr(stat_file(av[1]))});
+            help() : core(&(p_t){0, to_arr(stat_file(av[1]))});
 }

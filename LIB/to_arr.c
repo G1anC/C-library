@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2023
-** str_to_arr.C
+** to_arr.C
 ** File description:
-** str_to_arr
+** to_arr
 */
 
 
@@ -45,9 +45,9 @@ extern char **malloc_work(char *str)
 }
 
 // appel de fonction
-// str_to_arr(str, malloc_work(str));
+// to_arr(str, malloc_work(str));
 
-extern void str_to_arr(char restrict *str, char **arr)
+extern void to_arr(char restrict *str, char **arr)
 {
     size_t col = 0;
 
