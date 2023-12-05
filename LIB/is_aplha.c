@@ -3,7 +3,7 @@
 ** my_ls
 ** File description:
 ** is_alpha.c
-*/
+*////
 
 extern int is_alpha(char c)
 {
