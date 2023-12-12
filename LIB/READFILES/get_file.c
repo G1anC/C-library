@@ -6,8 +6,11 @@
 */
 
 #include "../../INCLUDE/my.h"
+#include <stdio.h>
 
-extern char **get_file(char restrict *name)
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
+
+char **get_file(char *name)
 {
     int i = 0;
     size_t size = 0;

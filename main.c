@@ -7,29 +7,20 @@
 
 #include "INCLUDE/my.h"
 
-int core(p_t *p)
+int core(p_t* p)
 {
-    for (;;) {
-        if (/* ERROR */)
-            return 84;
-        if (0)
-            continue;
-        ;
-    }
+    if (error_handler(p))
+        exit_err("wrong map");
     return 0;
-}
-
-int help(void)
-{
-    exit_err("USAGE : Project\n"
-        "\t--help : display help message\n"
-        "\t-l : show i don't know\n");
 }
 
 int main(int ac, char **av)
 {
-    if (ac != 2)
-        return 84;
-    return (!ncmp("-h", av[1], 2)) ?
-            help() : core(&(p_t){0, to_arr(stat_file(av[1]))});
+    char **map;
+
+    if (ac != 2 || strcmp("-h", av[1]))
+        exit_err("You needa give a map.\n");
+    map = stat_file(av[1]);
+    return (core(&(p_t){map, NULL, {0, 0, 0}}));
+    return 0;
 }

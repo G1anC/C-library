@@ -5,7 +5,9 @@
 ** my_arraylen
 */
 
-extern int arr_len(char **array)
+#include "../INCLUDE/my.h"
+
+int arr_len(char **array)
 {
     int i = 0;
 

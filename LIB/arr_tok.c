@@ -16,14 +16,14 @@ static int my_toklen(char *str, char *sep)
     return (++ligns) * PTR;
 }
 
-extern char **arr_tok(char *str, char *sep)
+char **arr_tok(char *str, char *sep)
 {
     char **array = malloc(my_toklen(str, sep));
     char *word = strtok(str, sep);
 
     while (word) {
         *(array++) = word;
-        word = strtok(NULL, sep)
+        word = strtok(NULL, sep);
     }
     return array;
 }

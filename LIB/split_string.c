@@ -16,19 +16,19 @@ static char **algo(char *str, char **arr, char *sep, int pos)
     for (; !index(sep, str[i]) && str[i]; i++);
     arr[pos] = malloc(i + 1);
     if ((i > 0 && !index(sep, str[i - 1])) && index(sep, str[i])) {
-        ncpy(arr[pos], str, i);
-        pos += len(arr[pos]);
+        strncpy(arr[pos], str, i);
+        pos += strlen(arr[pos]);
     }
     if (!str[i]) {
         if (i > 0 && !index(sep, str[i - 1]))
-            ncpy(arr[pos++], str, i);
+            strncpy(arr[pos++], str, i);
         arr[pos] = NULL;
         return arr;
     }
     return algo(&str[i + 1], arr, sep, pos);
 }
 
-extern char** split_string(char *str, char *sep)
+char** split_string(char *str, char *sep)
 {
     int count = 1;
 

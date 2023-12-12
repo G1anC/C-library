@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-extern char *to_str(int nb)
+char *to_str(int nb)
 {
     char *str = "";
     int tmp = nb * (-(nb < 0) + (nb >= 0));
@@ -15,8 +15,8 @@ extern char *to_str(int nb)
     if (nb == 0)
         return "0";
     for (; (tmp / 10) < 10; tmp /= 10) {
-        ncat(str, (char *) &(tmp % 10 + '0'), 1);
+        strncat(str, (char *) (tmp % 10 + '0'), 1);
         tmp -= (tmp % 10);
     } 
-    return (nb < 0) ? cat("-", str) : str;
+    return (nb < 0) ? strcat("-", str) : str;
 }

@@ -7,29 +7,35 @@
 
 
 #include "../INCLUDE/my.h"
+#include <string.h>
+
+char *strdup(const char *s);
 
 #define PTR sizeof(char *)
 
+#define ALPHA(c) (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || c >= '1' && c <= '9')
+
 // if there is a no_alphanumeric character at the start of the string
-#define START_NOALPHA (i == 0 && str[i] != ALPHA)
+#define START_NOALPHA (i == 0 && ALPHA(str[i]))
 
 // if we end a word and the next character isn't alphanumeric
-#define NEW_LINE (str[i] != ALPHA && str[i - 1] == ALPHA)
+#define NEW_LINE (ALPHA(str[i]) && ALPHA(str[i - 1]))
 
 // if we already are in a non alphanumeric part of the string
-#define IN_NOALPHA_PART (str[i - 1] != ALPHA && str[i] != ALPHA)
+#define IN_NOALPHA_PART (ALPHA(str[i - 1]) && ALPHA(str[i]))
+
 
 static size_t nbr_of_ligns(char *tmp)
 {
     size_t ligns = 0;
 
-    for (; *tmp++; ligns += (PTR * (*tmp != ALPHA && *(tmp - 1) == ALPHA)));
+    for (; *tmp++; ligns += (PTR * (ALPHA(*tmp) && ALPHA(*tmp - 1))));
     return ligns;
 }
 
-extern char **malloc_work(char *str)
+char **malloc_work(char *str)
 {
-    char **arr = malloc(nbr_of_ligns(dup(str)) + PTR);
+    char **arr = malloc(nbr_of_ligns(strdup(str)) + PTR);
     int wordSize = 0;
 
     for (size_t i = 0; str[i]; i++) {
@@ -47,7 +53,7 @@ extern char **malloc_work(char *str)
 // appel de fonction
 // to_arr(str, malloc_work(str));
 
-extern void to_arr(char restrict *str, char **arr)
+void to_arr(char *str, char **arr)
 {
     size_t col = 0;
 

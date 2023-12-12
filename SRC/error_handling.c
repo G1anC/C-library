@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-int error_handler(project_t *project)
+int error_handler(p_t *p)
 {
     if (1)
         return 84;

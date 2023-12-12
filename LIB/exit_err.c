@@ -1,16 +1,8 @@
-/*
-** EPITECH PROJECT, 2023
-** exxit.c
-** File description:
-** exxit
-*/
 
 #include "../INCLUDE/my.h"
 
-extern void exit_err(char *errMess)
+void exit_err(char *mess)
 {
-    put_str(2, errMess);
-    register int rdi asm("rdi") = 84;
-    register int rax asm("rax") = 60;
-    asm("syscall");
+    write(2, mess, strlen(mess));
+    exit(84);
 }

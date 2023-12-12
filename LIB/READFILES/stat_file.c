@@ -7,12 +7,12 @@
 
 #include "../../INCLUDE/my.h"
 
-extern char **stat_file(char restrict *fileName)
+char **stat_file(char *fileName)
 {
     struct stat st;
     char **arr = NULL;
     char *buffer = NULL;
-    int fd = open(fileName, O_RDONLY)
+    int fd = open(fileName, O_RDONLY);
     
     if (!stat(fileName, &st) || !st.st_size || !fd)
         exit_err("ERROR : Invalid file provided.\n");

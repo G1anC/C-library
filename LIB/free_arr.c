@@ -7,7 +7,7 @@
 
 #include "../INCLUDE/my.h"
 
-extern void free_arr(char **array)
+void free_arr(char **array)
 {
     for (int i = 0; array[i] != NULL; i++)
         free(array[i]);
