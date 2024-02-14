@@ -4,7 +4,7 @@
 
 You can find :
   *  A clear and conscise base of a C project.
-  *  My entire library, from "piscine" exercices to functions built along the year.
+  *  My entire library of C functions that are forbidden or inexistant (they carried me so much during my first year).
   *  Explanations of every library functions in ```INCLUDE/my.h``` file.
     
   <br>
